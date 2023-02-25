@@ -1,5 +1,11 @@
+#header {
+    display: flex
+}
+
 #hero-section {
     display: flex;
+    flex-wrap: wrap;
+
 }
 
 #text-box {
@@ -7,12 +13,18 @@
 
 #sub-section {
     display: flex;
+    flex-wrap: wrap;
+
 }
 
 #news-items {
     display: flex;
+    flex-wrap: wrap;
+
 }
 
 #contact {
     display: flex;
+    flex-wrap: wrap;
+
 }
