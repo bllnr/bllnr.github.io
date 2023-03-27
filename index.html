@@ -5,149 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Landing Page</title>
+    
     <link rel="stylesheet" href="style_structure.css">
     <link rel="stylesheet" href="style_color.css">
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
+  <link rel="icon" type="image/x-icon" href="./assets/otta_favicon.svg">
   </head>
   <body>
-    <div class='circle circle1'></div>
-    <div class='circle circle2'></div>
-    <div class='circle circle3'></div>
-    <div class='circle circle4'></div>
-    <div id="first-page-wrapper">
-        <header class="grid-12-col">
 
-            <img id="logo" src="some_corp_red.png"/>
-    
-            <div id="nav-element-about">
-                <a href="#about-us">
-                    <h4>About</h4>
-                </a>
-            </div>
-                
-            <div id="nav-element-news">
-                <a href="#news-section">
-                    <h4>News</h4>
-                </a>
-            </div>
-                
-                
-            <div id="nav-element-contact">
-                <a href="#contact-section">
-                    <button>
-                        <h4>Contact</h4>
-                    </button>
-                </a>
-            </div>
-                
-        </header>
-    
-        <section id="hero-section" class="grid-12-col animate__animated animate__fadeIn animate__fast">
-            <div id="hero-text-box">
-                <h1 >We're good &mdash; this is why</h1>
-                <h2>This is our short and snappy tagline that makes people want to click the button!</h2>
-                <a href="#contact-section">
-                    <button id="hero-button">
-                        <h4>Connect with us!</h4>
-                    </button>
-                </a>
-            </div>
-            <!--<div id="ill-placeholder-hero"></div>-->
-            <img id="ill-fill-up" src="scott-umstattd-lmClF825VYI-unsplash_w_bluebg.png" />
-        </section>
+    <header class="grid-12-col">
+        <img id="logo" src="./assets/otta_horizontal.svg"  alt="Otta Logo"/>
         
-    </div>
+        <div id="nav-element-projects">
+            <a href="#projects">
+                <h4>Projects</h4>
+            </a>
+        </div>
+            
+        <div id="nav-element-about">
+            <a href="#about-section">
+                <h4>About</h4>
+            </a>
+        </div>
+            
+        <div id="nav-element-contact">
+            <a href="#contact-section">
+                <button>
+                    <h4>Contact</h4>
+                </button>
+            </a>
+        </div>
+            
+    </header>
+
+    <section id="hero-section" class="grid-12-col">
+
+        <div id="hero-text-box">
+            <h1>Multi-disciplinary design studio working with physical/digital spaces and interfaces.</h1>
+        </div>
+    </section>
     
 
-    <section id="about-us" class="animate__animated animate__fadeIn animate__slower">
-        <section id="about-sub-section" class="grid-12-col">
-            <div id="about-text-box">
-                <h3 class="title-color">What we do</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. <br><br>
-                    Ut et massa monsai. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.</p>
-            </div>
-            <!--<div id="ill-placeholder"></div>-->
-            <img id="ill-fill-up" src="tamara-menzi-RSbHY4vdF9s-unsplash.png" />
-        </section>
+    <section id="projects" class="grid-12-col" class="animate__animated animate__fadeIn animate__slower">
 
-        <section id="about-sub-section" class="grid-12-col">
-            <div id="about-text-box">
-                <h3 class="title-color">Why we do it</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. <br><br>
-                    Ut et massa monsai. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.</p>
-            </div>
-            <!--<div id="ill-placeholder"></div>-->
-            <img id="ill-fill-up" src="ricky-kharawala-yfKKT7XlyBA-unsplash.png" />
-        </section>
+            <section id="projects-sub-section" class="grid-12-col">
+                <a href="" id="placeholder-1">
+                    <div class="ill-placeholder">
+                        <h3 class="project-title">Project</h3>
+                    </div>
+                </a>
+                
+                <a href="" id="placeholder-2">
+                    <div class="ill-placeholder">
+                        <h3 class="project-title">Project</h3>
+                    </div>
+                </a>
 
-        <section id="about-sub-section" class="grid-12-col">
-            <div id="about-text-box">
-                <h3 class="title-color">Who we are</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. <br><br>
-                    Ut et massa monsai. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.</p>
-            </div>
-            <!--<div id="ill-placeholder"></div>-->
-            <img id="ill-fill-up" src="karsten-wurth-ImeGmbUNarA-unsplash.png" />
-        </section>
+                <a href="" id="placeholder-3">
+                    <div class="ill-placeholder">
+                        <h3 class="project-title">Project</h3>
+                    </div>
+                </a>
+
+                <a href="" id="placeholder-4">
+                    <div class="ill-placeholder">
+                        <h3 class="project-title">Project</h3>
+                    </div>
+                </a>
+                
+            </section>
+            
     </section>
 
-    <section id="news-section">
-        <div id="news-items-container" class="grid-12-col">
-            <h2 id="news-section-header" class="title-color">News</h2>
-        </div>
+    <section id="about-section" class="grid-12-col">
 
-        <div id="news-items-container" class="grid-24-col">
+        <section id="about-sub-section">
 
-            <div id="scroller-icon" class="rotate-180 disabled-button"><img src="chevron-right-solid-white.svg"/></div>
+            <h2>About</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. <br><br>
+                Ut et massa monsai. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.</p>
 
-            <div id="news-item-1" class="news-item">
-                <h3>Event</h3>
-                <i>2023-02-16</i>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.
-                    Ut et massa mi. Aliquam in hendrerit urna.</p>
-            </div>
-
-            <div id="news-item-2">
-                <h3>Collaboration</h3>
-                <i>2023-01-05</i>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.
-                    Ut et massa mi. Aliquam in hendrerit urna.</p>
-            </div>
-
-            <div id="news-item-3">
-                <h3>Milestone</h3>
-                <i>2023-12-15</i>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.
-                    Ut et massa mi. Aliquam in hendrerit urna.</p>
-            </div>
-
-            <div id="news-item-4">
-                <h3>Exciting work</h3>
-                <i>2023-11-09</i>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.
-                    Ut et massa mi. Aliquam in hendrerit urna.</p>
-            </div>
-            
-            <div id="scroller-icon"><img src="chevron-right-solid-white.svg"/></div>
-        </div>
+        </section>
         
     </section>
 
     <section id="contact-section" class="grid-24-col">
+        
         <div id="contact-text">
-            <h2 class="title-color">Connect with us!</h2>
-            <p>Contact us for collaboration, events and other opportunities.<br><br>Or meet us on social</p><br>
-            <div id="social-icons-wrapper">
+            <h2>Connect</h2>
+            <p>Fill in the contact form to get in touch for work or other opportunities.</p>
+            <!--
+                <div id="social-icons-wrapper">
                 <img id="social-icon" src="twitter.svg" />
                 <img id="social-icon" src="linkedin-in.svg" />
             </div>
-            
+
+            -->
+
         </div>
+
         <div id="contact-form">
-            <h3>Send us a message</h3>
+            <h3>Send a message</h3>
             <form action="" method="get" class="form-example">
                 <div class="form-input-field">
                   <label for="name">Name: </label><br>
@@ -178,14 +139,14 @@
                   </div>
               </form>
         </div>
+
     </section>
 
     <footer class="grid-12-col">
-        <div id="footer-adress"><p>Some Corp<br>Mainstreet 1<br>111 11 Sometown</p></div>
-        <div id="footer-copyright"><p>&#169; 2023 Some Corp</p></div>
+        <div id="footer-copyright"><p>&#169; 2023 Otta</p></div>
     </footer>
 
-	<script src="index.js"></script>
+	<!--<script src="index.js"></script>-->
   </body>
 </html>
 

@@ -1,140 +1,209 @@
 /*FONT STYLING*/
 
+:root { --white:#fcfbf3;
+        --black:#1e1e16;
+
+        --grey-0:#fdfcf7;
+        --grey-1:#faf8ea;
+        --grey-2:#f2eedc;
+        --grey-3:#dbd6c5;
+        --grey-4:#bbb7aa;
+        --grey-5:#97948a;
+        --grey-6:#79766c;
+        --grey-7:#625f54;
+        --grey-8:#4b493e;
+        --grey-9:#39382d;
+        --grey-10:#292920;
+
+        --orchid-0:#fffef6;
+        --orchid-1:#fefbd9;
+        --orchid-2:#fbf2c0;
+        --orchid-3:#ecdb86;
+        --orchid-4:#cdbb76;
+        --orchid-5:#a2945c;
+        --orchid-6:#827647;
+        --orchid-7:#6a5f34;
+        --orchid-8:#514923;
+        --orchid-9:#3c3816;
+        --orchid-10:#2b290d;
+
+        --blue-0:#f2fbff;
+        --blue-1:#def4ff;
+        --blue-2:#bce2ff;
+        --blue-3:#92c9ff;
+        --blue-4:#72aaff;
+        --blue-5:#4a87ff;
+        --blue-6:#1e64e9;
+        --blue-7:#194abd;
+        --blue-8:#123898;
+        --blue-9:#0a2a7c;
+        --blue-10:#001b65;
+
+        --green-0:#f9fef3;
+        --green-1:#ecfcd7;
+        --green-2:#cee8a9;
+        --green-3:#b0d36e;
+        --green-4:#95b849;
+        --green-5:#7c9a2c;
+        --green-6:#5f771a;
+        --green-7:#495c11;
+        --green-8:#384a04;
+        --green-9:#2a3900;
+        --green-10:#1d2a00;
+
+        --yellow-0:#fffded;
+        --yellow-1:#fff8c5;
+        --yellow-2:#fae17d;
+        --yellow-3:#eac54f;
+        --yellow-4:#d4a72c;
+        --yellow-5:#bf8700;
+        --yellow-6:#9a6700;
+        --yellow-7:#7d4e00;
+        --yellow-8:#633c01;
+        --yellow-9:#4d2d00;
+        --yellow-10:#3b2300;
+
+        --orange-0:#fffaf5;
+        --orange-1:#fff1e3;
+        --orange-2:#ffd9ae;
+        --orange-3:#ffb86d;
+        --orange-4:#f9912b;
+        --orange-5:#d97524;
+        --orange-6:#b45300;
+        --orange-7:#8e3e00;
+        --orange-8:#713100;
+        --orange-9:#582500;
+        --orange-10:#441a00;
+
+        --red-0:#fff8f6;
+        --red-1:#ffebe6;
+        --red-2:#ffcfc4;
+        --red-3:#ffac9a;
+        --red-4:#fd846d;
+        --red-5:#f45021;
+        --red-6:#c13b1b;
+        --red-7:#9d220c;
+        --red-8:#810d07;
+        --red-9:#670003;
+        --red-10:#4b0400;
+
+        --pink-0:#fff7f9;
+        --pink-1:#ffeff3;
+        --pink-2:#ffd4df;
+        --pink-3:#ffb0c3;
+        --pink-4:#ff86a4;
+        --pink-5:#ea5f85;
+        --pink-6:#c83662;
+        --pink-7:#a0254e;
+        --pink-8:#7d1e3f;
+        --pink-9:#661133;
+        --pink-10:#500327;}
+
 html {font-size: 100%;} /*16px*/
 
+/*BODY*/
 body {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  line-height: 1.75;
+    background-color: var(--white);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.75;
+    color: var(--black);
 }
 
 h1 {
   margin-top: 0;
-  font-size: 64px;
-  font-weight: 900;
+  font-size: 96px;
+  font-weight:100;
   line-height: 1;
   padding-bottom: 32px;
+  font-style: italic;
 }
 
-h2 {font-size: 32px;
-    font-weight: 500;
-    line-height: 1;
+h2 {font-size: 56px;
+    font-weight: 100;
+    line-height: 1.2;
     padding-bottom: 16px;
 }
 
 h3 {font-size: 24px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.5;
     letter-spacing: -0.55px;
     
 }
 
 h4 {font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.5;}
 
 small, .text_small {font-size: 12px;}
 
-/*BODY*/
-body {
-    background-color: #042649;
-    color: #F0F2F5;
-    background-image: linear-gradient(
-  0deg,
-  hsl(210deg 90% 15%) 0%,
-  hsl(210deg 90% 14%) 11%,
-  hsl(210deg 91% 14%) 22%,
-  hsl(210deg 91% 13%) 33%,
-  hsl(210deg 91% 13%) 44%,
-  hsl(209deg 91% 12%) 56%,
-  hsl(209deg 91% 12%) 67%,
-  hsl(209deg 90% 11%) 78%,
-  hsl(209deg 89% 11%) 89%,
-  hsl(209deg 88% 10%) 100%
-);
-background-repeat: no-repeat;
-    background-attachment: fixed;
-}
 
-/*TEXT BUTTON ICON COLOR & DECORATION*/
+
+/*BUTTONS ICONS LINKS */
 a {
     text-decoration: none;
-    color: #F0F2F5;
+    color: var(--pink-6);
+    font-weight: bold;
+    font-family: 'space mono', monospace;
 }
 
 a:visited {
     text-decoration: none;
-    color: #F0F2F5;
+    color: var(--pink-6);
 }
 
 a:hover {
-    color: #F66155;
+    color: var(--black);
+    transform: scale(102%);
     transition: ease-in;
-    transition-duration: 500ms;
+    transition-duration: 300ms;
+    font-style: italic;
 }
 
 button {
-    background-color: #F66155;
-    color: #F0F2F5;
+    background-color: var(--black);
+    color: var(--white);
 }
 
 button:hover{
-    background-color: #FAA49E;
+    background-color: var(--pink-6);
+    color: var(--white);
+    transform: scale(102%);
     transition: ease-in;
-    transition-duration: 500ms;
-    color: #202020;
+    transition-duration: 300ms;
+}
+
+.ill-placeholder {
+    border-radius: 10px;
+    color: var(--black);
+}
+
+.ill-placeholder:hover{
+    background-color: var(--pink-6);
+    color: var(--white);
+    transform: scale(102%);
+    transition: ease-in;
+    transition-duration: 300ms;
+}
+
+
+.project-title {
+    padding: 1rem;
 }
 
 #social-icon {
-    color:#F0F2F5;
+    color:var(--black);
 }
 
+/*
 .title-color{
-    color: #D1D9E0;
+    color: var(--black);
 }
+*/
 
 footer {
     background-color: transparent;
 }
-
-.circle {
-}
-
-.circle {  
-    width: 1000px;
-    height: 1000px;
-    border-radius: 50%;
-    top:-500px;
-    left: -500px;
-    background: #042749;
-    animation-duration: 12s;
-    animation-iteration-count: infinite;
-    animation-name:circle;
-    opacity:0;
-    position: absolute;
-    z-index: -1;
-  }
-  
-  .circle2 {  
-      animation-delay:3s;
-  }
-  
-  .circle3 {
-      animation-delay:6s;
-  }
-  .circle4 {
-      animation-delay:9s;
-  }
-  
-  @keyframes circle {
-    0%   {  
-    -webkit-transform: scale(0.05);
-    opacity:1;
-    transition-timing-function: ease-in-out;
-    }  
-    100%{  
-    -webkit-transform: scale(1);
-    opacity:0;
-    transition-timing-function: ease-in-out;
-    } 
-  }
