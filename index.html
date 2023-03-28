@@ -7,7 +7,8 @@
     <title>Landing Page</title>
     
     <link rel="stylesheet" href="style_structure.css">
-    <link rel="stylesheet" href="style_color.css">
+    <link rel="stylesheet" href="style_styling.css">
+    <link rel="stylesheet" href="media_queries.css">
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -17,21 +18,24 @@
   <body>
 
     <header class="grid-12-col">
-        <img id="logo" src="./assets/otta_horizontal.svg"  alt="Otta Logo"/>
+        <a href="" id="logo">
+            <img src="./assets/otta_horizontal.svg"  alt="Logo"/>
+        </a>
         
-        <div id="nav-element-projects">
+        
+        <div class="nav-element" id="nav-element-projects">
             <a href="#projects">
                 <h4>Projects</h4>
             </a>
         </div>
             
-        <div id="nav-element-about">
+        <div class="nav-element" id="nav-element-about">
             <a href="#about-section">
                 <h4>About</h4>
             </a>
         </div>
             
-        <div id="nav-element-contact">
+        <div class="nav-element" id="nav-element-contact">
             <a href="#contact-section">
                 <button>
                     <h4>Contact</h4>
@@ -41,48 +45,46 @@
             
     </header>
 
-    <section id="hero-section" class="grid-12-col">
+    <section id="intro-section" class="grid-12-col">
 
-        <div id="hero-text-box">
+        <div class="full-span-12-col">
             <h1>Multi-disciplinary design studio working with physical/digital spaces and interfaces.</h1>
         </div>
+
     </section>
     
 
-    <section id="projects" class="grid-12-col" class="animate__animated animate__fadeIn animate__slower">
+    <section id="projects" class="grid-24-col" class="animate__animated animate__fadeIn animate__slower">
 
-            <section id="projects-sub-section" class="grid-12-col">
-                <a href="" id="placeholder-1">
-                    <div class="ill-placeholder">
-                        <h3 class="project-title">Project</h3>
-                    </div>
-                </a>
-                
-                <a href="" id="placeholder-2">
-                    <div class="ill-placeholder">
-                        <h3 class="project-title">Project</h3>
-                    </div>
-                </a>
+        <a href="" id="placeholder-1" class="project-link">
+            <div class="project-placeholder">
+                <h3 class="project-title">Project</h3>
+            </div>
+        </a>
+        
+        <a href="" id="placeholder-2" class="project-link">
+            <div class="project-placeholder">
+                <h3 class="project-title">Project</h3>
+            </div>
+        </a>
 
-                <a href="" id="placeholder-3">
-                    <div class="ill-placeholder">
-                        <h3 class="project-title">Project</h3>
-                    </div>
-                </a>
+        <a href="" id="placeholder-3" class="project-link">
+            <div class="project-placeholder">
+                <h3 class="project-title">Project</h3>
+            </div>
+        </a>
 
-                <a href="" id="placeholder-4">
-                    <div class="ill-placeholder">
-                        <h3 class="project-title">Project</h3>
-                    </div>
-                </a>
-                
-            </section>
-            
+        <a href="" id="placeholder-4" class="project-link">
+            <div class="project-placeholder">
+                <h3 class="project-title">Project</h3>
+            </div>
+        </a>
+
     </section>
 
     <section id="about-section" class="grid-12-col">
 
-        <section id="about-sub-section">
+        <div class="half-span-12-col">
 
             <h2>About</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. <br><br>
@@ -94,8 +96,9 @@
 
     <section id="contact-section" class="grid-24-col">
         
-        <div id="contact-text">
-            <h2>Connect</h2>
+        <h2 class="full-span-24-col">Connect</h2>
+        <div class="half-span-24-col">
+            
             <p>Fill in the contact form to get in touch for work or other opportunities.</p>
             <!--
                 <div id="social-icons-wrapper">
@@ -107,43 +110,52 @@
 
         </div>
 
-        <div id="contact-form">
+        <div id="contact-form" class="half-span-24-col-right">
             <h3>Send a message</h3>
+
             <form action="" method="get" class="form-example">
+                
                 <div class="form-input-field">
                   <label for="name">Name: </label><br>
                   <input type="text" name="name" id="name" required>
                 </div>
+
                 <div class="form-input-field">
                   <label for="email">E-mail: </label><br>
                   <input type="email" name="email" id="email" required>
                 </div>
+
                 <div class="form-input-field">
                     <label for="phone">Phone: </label><br>
                     <input type="phone" name="phone" id="phone">
-                  </div>
-                  <div class="form-input-field">
+                </div>
+
+                <div class="form-input-field">
                     <label for="URL">Website URL: </label><br>
                     <input type="URL" name="URL" id="URL">
-                  </div>
-                  <div class="form-input-field">
+                </div>
+
+                <div class="form-input-field">
                     <label for="subject">Subject: </label><br>
                     <input type="subject" name="subject" id="subject" required>
-                  </div>
-                  <div class="form-input-field">
+                </div>
+
+                <div class="form-input-field">
                     <label for="message">Message: </label><br>
                     <textarea name="message" id="message" rows="5" required ></textarea>
-                  </div>
-                  <div class="form-button">
+                </div>
+
+                <div class="form-button">
                     <button id="form-button" type="submit">Send message</button>
-                  </div>
-              </form>
+                </div>
+
+            </form>
         </div>
 
     </section>
 
     <footer class="grid-12-col">
-        <div id="footer-copyright"><p>&#169; 2023 Otta</p></div>
+        <div class="full-span-12-col"><p>&#169; 2023 Otta</p></div>
     </footer>
 
 	<!--<script src="index.js"></script>-->

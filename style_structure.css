@@ -32,15 +32,14 @@ p, h1, h2, h3, h4, h5, h6 {
 @import url('https://fonts.googleapis.com/css?family=Inter:400');
 /*@import url('https://fonts.googleapis.com/css?family=Space-Mono');*/
 
-
+/***************************************/
+/*Padding between sections*/
 section {
     padding-top: 64px;
 }
 
-section > section {
-    padding-top: 0px;
-}
-
+/***************************************/
+/*Setting upp grids*/
 .grid-12-col {
     display: grid;
     grid-template-columns: repeat(12, [col-start] 1fr);
@@ -55,76 +54,79 @@ section > section {
     grid-auto-rows: auto;
 }
 
+/*Reusable classes for grid placement*/
+.full-span-12-col {
+    grid-column: col-start 2 / span 10;
+}
+
+.half-span-12-col {
+    grid-column: col-start 2 / span 5;
+}
+
+.full-span-24-col {
+    grid-column: col-start 3 / span 20;
+}
+
+.half-span-24-col {
+    grid-column: col-start 3 / span 10;
+}
+
+.half-span-24-col-right {
+    grid-column: col-start 13 / span 10;
+}
+
+/***************************************/
+/*Styling for intro section*/
+
 header {
     align-items: center;
     padding-top: 32px;
 }
 
 #logo {
-    grid-column: col-start 2 / span 5;
+    grid-column: col-start 2; /*setting span makes element overflow on vertical*/
     align-self: center;
-    height: 64px;
+    max-height: 64px;
+}
+
+.nav-element { /*applied to all nav-elements*/
+    display: flex;
+    justify-content: center;
 }
 
 #nav-element-projects {
     grid-column: col-start 9 / span 1;
-    display: flex;
-    justify-content: center;
 }
 
 #nav-element-about {
     grid-column: col-start 10 / span 1;
-    display: flex;
-    justify-content: center;
 }
 
 #nav-element-contact {
     grid-column: col-start 11 / span 1;
-    display: flex;
-    justify-content: center;
 }
 
-#logo-image{
-    grid-column: col-start 2 / span 1;
-    grid-row: auto;
-    object-fit: cover;
-}
+/***************************************/
+/*Setting upp placeholders for projects*/
 
-#hero-text-box {
-    grid-column: col-start 2 / span 10;
-}
-
-/*avoid double padding*/
-#projects-sub-section:nth-of-type(1) {
-    padding-top: 0px;
-}
-
-#about-sub-section {
-    grid-column: col-start 2 / span 4;
-}
-
-#projects-sub-section {
-    grid-column: col-start 2 / span 10;
-}
-
-.ill-placeholder{
+.project-placeholder{ /*applied to all placeholders*/
     background-color: var(--pink-1);
     height: 200px;
 }
 
 #placeholder-1 {
-    grid-column: col-start 1 / span 3;
+    grid-column: col-start 3 / span 5;
 }
 
 #placeholder-2 {
-    grid-column: col-start 4 / span 3;
+    grid-column: col-start 8 / span 5;
 }
 #placeholder-3 {
-    grid-column: col-start 7 / span 3;
+    grid-column: col-start 13 / span 5;
 }
 
 #placeholder-4 {
-    grid-column: col-start 10 / span 3;
+    grid-column: col-start 18 / span 5;
 }
 
 #ill-fill-up { /*handles different aspect ratios*/
@@ -133,52 +135,8 @@ header {
     object-fit: cover;
 }
 
-#contact-text {
-    grid-column: col-start 3 / span 10;
-}
-
-#contact-form {
-    grid-column: col-start 13 / span 10;
-    justify-items: end;
-}
-
-#footer-adress {
-    grid-column: col-start 2 / span 4;
-}
-
-#footer-copyright {
-    grid-column: col-start 2 / span 10;
-    justify-self: start;
-}
-
-.form-input-field {
-    padding-top: 8px;
-}
-.form-input-field:last-of-type {
-    padding-bottom: 8px;
-}
-
-footer {
-    padding-top: 32px;
-    padding-bottom: 32px;
-    font-size: 12px;
-    align-items: end;
-}
-
-button {
-    border: 0px;
-    padding: 8px 16px 8px 16px;
-    border-radius: 24px;
-}
-
-#hero-button {
-    margin-top: 16px;
-    margin-bottom: 16px;
-}
-
-.form-button {
-    padding-top: 16px;
-}
+/***************************************/
+/*Styling Contact section + Form*/
 
 #social-icons-wrapper {
     display: flex;
@@ -190,68 +148,33 @@ button {
     margin-right: 16px;
 }
 
+.form-input-field {
+    padding-top: 8px;
+}
+.form-input-field:last-of-type {
+    padding-bottom: 8px;
+}
+
+.form-button {
+    padding-top: 16px;
+}
+
 input, textarea{
     width: 100%;
 }
 
-/*MEDIA QUERIES, NARROW SCREENS*/
+/***************************************/
+/*Styling footer*/
+footer {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 12px;
+    align-items: end;
+}
 
-@media (max-width: 1000px) {
 
-    p, h1, h2, h3, h4, h5, h6 {
-        overflow-wrap: anywhere;
-      }
 
-    button {
-        overflow-wrap: break-word;
-    }
 
-    .grid-12-col {
-        display: flex;
-        flex-direction: column;
-        padding-left: 16px;
-        padding-right: 16px;
-    }
 
-    .grid-24-col {
-        display: flex;
-        flex-direction: column;
-        padding-left: 16px;
-        padding-right: 16px;
-      }
 
-    section {
-        padding-top: 32px;
-    }
 
-    header {
-        display: flex;
-        flex-direction:row !important;
-        justify-content: space-between;
-    }
-
-    #hero-button {
-        margin-top: 16px;
-        margin-bottom: 16px;
-    }
-
-    #about-sub-section {
-        padding-top: 32px;
-        padding-bottom: 0px;
-    }
-
-    footer {
-        display: flex;
-        flex-direction: row !important;
-        justify-content: space-between;
-        align-items: end;
-    }
-
-    #ill-fill-up {
-        width:100%;
-        height: auto;
-        background-color: #d9d9d9;
-        grid-column: col-start 7 / span 5;
-        object-fit: cover;
-    }
-  }
