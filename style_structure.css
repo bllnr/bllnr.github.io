@@ -29,9 +29,6 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Inter:400');
-/*@import url('https://fonts.googleapis.com/css?family=Space-Mono');*/
-
 /***************************************/
 /*Padding between sections*/
 section {
@@ -83,13 +80,13 @@ header {
     padding-top: 32px;
 }
 
-#logo {
+#logo-container {
     grid-column: col-start 2; /*setting span makes element overflow on vertical*/
     align-self: center;
     max-height: 64px;
 }
 
-.nav-element { /*applied to all nav-elements*/
+.nav-element-desktop { /*applied to all nav-elements*/
     display: flex;
     justify-content: center;
 }
@@ -104,6 +101,10 @@ header {
 
 #nav-element-contact {
     grid-column: col-start 11 / span 1;
+}
+
+#nav-mobile { /*hide navigation for small screens*/
+    display: none;
 }
 
 /***************************************/

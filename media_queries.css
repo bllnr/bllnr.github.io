@@ -1,3 +1,5 @@
+@import "./style_styling.css";
+
 /*MEDIA QUERIES, NARROW SCREENS*/
 
 @media (max-width: 1000px) {
@@ -22,33 +24,62 @@
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: -0.55px;
-        
     }
     
     h4 {
         font-size: 16px;
-        line-height: 1.5;}  
+        line-height: 1.5;
+    }  
 
     button {
         overflow-wrap: break-word;
     }
 
+    a:hover {
+        transform: scale(99%);
+    }
+
     /**********************************/
-    /*Converting grid elements to flex*/
+    /*Adjusting grid elements*/
 
     .grid-12-col {
-        display: flex;
-        flex-direction: column;
-        padding-left: 16px;
-        padding-right: 16px;
+        display: grid;
+        grid-template-columns: repeat(2, [col-start] 1fr);
+        gap: 16px;
+        grid-auto-rows: auto;
+        padding-left: 10%;
+        padding-right: 10%;
     }
 
     .grid-24-col {
-        display: flex;
-        flex-direction: column;
-        padding-left: 16px;
-        padding-right: 16px;
+        display: grid;
+        grid-template-columns: repeat(2, [col-start] 1fr);
+        gap: 16px;
+        grid-auto-rows: auto;
+        padding-left: 10%;
+        padding-right: 10%;
       }
+
+    /*Reusable classes for grid placement*/
+    .full-span-12-col {
+      grid-column: col-start 1 / span 2;
+    }
+
+    .half-span-12-col {
+        grid-column: col-start 1 / span 1;
+    }
+
+    .full-span-24-col {
+        grid-column: col-start 1 / span 1;
+    }
+
+    .half-span-24-col {
+        grid-column: col-start 1 / span 1;
+    }
+
+    .half-span-24-col-right {
+        grid-column: col-start 1 / span 1;
+    }
 
     /**********************************/
     /*General*/
@@ -60,11 +91,36 @@
     /**********************************/
     /*Header*/
 
-    header {
-        display: flex;
-        flex-direction:row !important;
-        justify-content: space-between;
+
+    #logo-container {
+        grid-column: col-start 1 / span 1;
     }
+
+    #logo {
+        background-color: red;
+        max-width: 50%
+
+    }
+
+   .nav-element-desktop {
+        display: none;
+    }
+
+    #nav-mobile { /*hide navigation for small screens*/
+        grid-column: col-start 2 / span 1;
+
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        
+    }
+
+    .nav-element-mobile {
+        display: flex;
+        justify-content: end;
+    }
+
+
 
     /**********************************/
     /*Projects*/
@@ -75,6 +131,11 @@
 
     .project-link:last-of-type {
         padding-bottom: 0px ;
+    }
+
+    #placeholder-1, #placeholder-2, #placeholder-3, #placeholder-4 {
+        grid-column: span 1;
+
     }
 
     #ill-fill-up {
@@ -97,3 +158,15 @@
     }
     
   }
+
+@media (max-width: 500px) {
+
+    #logo {
+        max-width: 75%
+    }
+
+    #placeholder-1, #placeholder-2, #placeholder-3, #placeholder-4 {
+        grid-column: span 1;
+
+    }
+}
