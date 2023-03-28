@@ -154,16 +154,12 @@ text-decoration: none;
 color: var(--pink-6);
 }
 
-a:hover {
+a:hover{
 color: var(--black);
 transform: scale(102%);
 transition: ease-in;
 transition-duration: 300ms;
 font-style: italic;
-}
-
-a:active {
-/*?*/
 }
 
 button {
@@ -181,10 +177,6 @@ color: var(--white);
 transform: scale(102%);
 transition: ease-in;
 transition-duration: 300ms;
-}
-
-.project-link {
-/*?*/
 }
 
 .project-placeholder {

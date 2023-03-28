@@ -97,9 +97,7 @@
     }
 
     #logo {
-        background-color: red;
         max-width: 50%
-
     }
 
    .nav-element-desktop {
@@ -159,14 +157,14 @@
     
   }
 
-@media (max-width: 500px) {
+@media (max-width: 450px) {
 
     #logo {
         max-width: 75%
     }
 
     #placeholder-1, #placeholder-2, #placeholder-3, #placeholder-4 {
-        grid-column: span 1;
+        grid-column: span 2;
 
     }
 }
