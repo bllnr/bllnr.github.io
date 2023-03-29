@@ -181,16 +181,15 @@ button:hover{
     background-color: var(--pink-6);
 }
 
-.project-image{
-    border-radius: 10px;
-    color: var(--black);
-}
-
-.project-image:hover, .project-image:focus {
+.project-boxes:hover, .project-boxes:focus {
     transform: scale(101%);
     transition: ease-in;
     transition-duration: 300ms;
-    opacity: 40%;
+}
+
+.project-image{
+    border-radius: 10px;
+    color: var(--black);
 }
 
 .project-title {
