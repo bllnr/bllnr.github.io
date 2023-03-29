@@ -108,33 +108,43 @@ header {
 }
 
 /***************************************/
-/*Setting upp placeholders for projects*/
+/*Setting upp project links*/
 
-.project-placeholder{ /*applied to all placeholders*/
-    background-color: var(--pink-1);
-    height: 200px;
-}
-
-#placeholder-1 {
+#project-box-1 { /*placement in grid, separately for each link*/
     grid-column: col-start 3 / span 5;
 }
 
-#placeholder-2 {
+#project-box-2 {
     grid-column: col-start 8 / span 5;
 }
-#placeholder-3 {
+#project-box-3 {
     grid-column: col-start 13 / span 5;
 }
 
-#placeholder-4 {
+#project-box-4 {
     grid-column: col-start 18 / span 5;
 }
 
-#ill-fill-up { /*handles different aspect ratios*/
-    height: 100%;
-    background-color:var(--pink-5);
-    object-fit: cover;
+.project-image{ /*applied to all projects images*/
+    background-color: transparent;
+    width: 100%;
+    height:100%;
+    object-fit: cover; /*keeps aspect-ratio, fills the box*/
 }
+
+
+.project-titleBAH {
+    position: relative;
+    top: -3rem; /*move to bottom of image, not outside*/
+    left: 12px;
+    z-index: 2; /*place on top of image*/
+}
+
+span {
+    
+}
+
+
 
 /***************************************/
 /*Styling Contact section + Form*/

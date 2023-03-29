@@ -106,7 +106,6 @@
 
     #nav-mobile { /*hide navigation for small screens*/
         grid-column: col-start 2 / span 1;
-
         display: flex;
         flex-direction: column;
         align-content: space-between;
@@ -118,32 +117,17 @@
         justify-content: end;
     }
 
-
-
     /**********************************/
     /*Projects*/
 
-    .project-link {
+    .project-boxes {
         padding-bottom: 16px ;
     }
 
-    .project-link:last-of-type {
-        padding-bottom: 0px ;
-    }
-
-    #placeholder-1, #placeholder-2, #placeholder-3, #placeholder-4 {
+    #project-box-1, #project-box-2, #project-box-3, #project-box-4 {
         grid-column: span 1;
 
     }
-
-    #ill-fill-up {
-        width:100%;
-        height: auto;
-        background-color: #d9d9d9;
-        grid-column: col-start 7 / span 5;
-        object-fit: cover;
-    }
-
 
     /**********************************/
     /*Footer*/
@@ -157,7 +141,7 @@
     
   }
 
-@media (max-width: 450px) {
+@media (max-width: 400px) {
 
     #logo {
         max-width: 75%
