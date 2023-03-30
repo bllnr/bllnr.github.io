@@ -60,6 +60,10 @@ section {
     grid-column: col-start 2 / span 5;
 }
 
+.half-span-12-col-right {
+    grid-column: col-start 7 / span 5;
+}
+
 .full-span-24-col {
     grid-column: col-start 3 / span 20;
 }
