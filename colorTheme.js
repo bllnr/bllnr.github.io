@@ -16,6 +16,9 @@ function startup() {
     //event to trigger on change in harmony mode drop-down
     let select = document.querySelector("#harmonyMode");
     select.addEventListener("change", updateAll);
+    // changes src of harmony-image on each update of dropdown
+    let harmonyImage = document.querySelector("#harmony-image");
+    harmonyImage.src = "./assets/harmonies/" + harmonyMode + ".svg";
 
     // setting color input, event to change swatches on input or change color input
     colorWell = document.querySelector("#colorWell");
@@ -127,6 +130,10 @@ function updateAll(event) {
     setHarmonyMode(harmonyMode);
     setLayout(harmonyMode);
 
+    // changes src of harmony-image on each update of dropdown
+    let harmonyImage = document.querySelector("#harmony-image");
+    harmonyImage.src = "./assets/harmonies/" + harmonyMode + ".svg";
+
     document.querySelectorAll("#swatch").forEach(function (div, index) {
 
         let startColor = colorWell.value;
@@ -200,9 +207,9 @@ function getHue(startColor, index, harmonyAngle, numberHue, harmonyMode) {
         if (index % numberHue == 0) {
             hue += 0;
         } else if (index % numberHue == 1) {
-            hue += 60;
-        } else if (index % numberHue == 2) {
             hue += 180;
+        } else if (index % numberHue == 2) {
+            hue += 60;
         } else if (index % numberHue == 3) {
             hue += 240;
         } return hue;
@@ -218,9 +225,9 @@ function getHue(startColor, index, harmonyAngle, numberHue, harmonyMode) {
         if (index % numberHue == 0) {
             hue += 0;
         } else if (index % numberHue == 1) {
-            hue += 90;
-        } else if (index % numberHue == 2) {
             hue += 180;
+        } else if (index % numberHue == 2) {
+            hue += 90;
         } else if (index % numberHue == 3) {
             hue += 270;
         } return hue;
