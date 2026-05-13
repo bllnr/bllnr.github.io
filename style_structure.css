@@ -37,6 +37,13 @@ section {
 
 /***************************************/
 /*Setting upp grids*/
+.grid-2-col {
+    display: grid;
+    grid-template-columns: repeat(2, [col-start] 1fr);
+    gap: 20px;
+    grid-auto-rows: auto;
+}
+
 .grid-12-col {
     display: grid;
     grid-template-columns: repeat(12, [col-start] 1fr);
@@ -145,6 +152,9 @@ header {
     padding: 16px;
 }
 
+#alzheimer-main {
+    margin:40px;
+}
 
 /***************************************/
 /*Styling Contact section + Form*/
