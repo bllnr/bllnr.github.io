@@ -1,6 +1,7 @@
 /*STYLING ELEMENTS: SIZING, SPACING, COLOR, INTERACTION ETC.*/
 
-:root { --white:#fcfbf3;
+:root { 
+    --white:#ffffff;
     --black:#1e1e16;
 
     --grey-0:#fdfcf7;
@@ -103,7 +104,7 @@ html {font-size: 100%;} /*16px*/
 
 /*BODY*/
 body {
-    background-color: var(--white);
+    background-color: #ffffff;
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: 'Inter', sans-serif;
@@ -137,10 +138,14 @@ h3 {
 
 h4 {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 1.5;}
 
 small, .text_small {font-size: 12px;}
+
+.fig_text {
+    font-size: 14px; 
+    font-weight: 700;}
 
 
 
@@ -202,4 +207,35 @@ button:hover{
 
 footer {
     background-color: transparent;
+}
+
+
+/* Custom Content Type Variations */
+
+.project-meta {
+    font-family: 'space mono', monospace;
+    color: var(--grey-6);
+    line-height: 1.6;
+}
+
+.highlight-text {
+    font-size: 28px;
+    line-height: 1.4;
+    color: var(--orange-3);
+    font-weight: 600;
+}
+
+.section-title h3 {
+    font-size: 32px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--black);
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+}
+
+.concepts-container h4 {
+    margin-top: 16px;
+    margin-bottom: 8px;
 }

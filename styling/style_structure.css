@@ -63,6 +63,34 @@ section {
     grid-column: col-start 2 / span 10;
 }
 
+.span-2 {
+    grid-column: span 2;
+}
+
+.span-3 {
+    grid-column: span 3;
+}
+
+.span-4 {
+    grid-column: span 4;
+}
+
+.span-5 {
+    grid-column: span 5;
+}
+
+.span-6 {
+    grid-column: span 6;
+}
+
+.span-8 {
+    grid-column: span 8;
+}
+
+.span-9 {
+    grid-column: span 6;
+}
+
 .half-span-12-col {
     grid-column: col-start 2 / span 5;
 }
@@ -70,6 +98,27 @@ section {
 .half-span-12-col-right {
     grid-column: col-start 7 / span 5;
 }
+
+.third-span-12-left {
+    grid-column: col-start 2 / span 3;
+}
+
+.third-span-12-center {
+    grid-column: col-start 5 / span 4;
+}
+
+.third-span-12-right {
+    grid-column: col-start 9 / span 4;
+}
+
+.two-third-span-12-center {
+    grid-column: col-start 5 / span 8;
+}
+
+.sixth-span-12 {
+    grid-column: span 2;
+}
+
 
 .full-span-24-col {
     grid-column: col-start 3 / span 20;
@@ -194,8 +243,74 @@ footer {
 }
 
 
+/***************************************/
+/* Thesis Project Specific Layouts */
+
+.concepts-container {
+    margin-top: 48px;
+    gap: 32px;
+}
+
+.layout-dark-bg {
+    background-color: var(--orchid-0);
+    padding: 64px 40px;
+    margin: 48px -40px; /* Bleed effect if nested */
+    border-radius: 4px;
+}
+
+.centered-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inline-diagram {
+    max-height: 380px;
+    width: auto;
+    object-fit: contain;
+}
+
+.project-image-hero {
+    width: 100%;
+    height: auto;
+    max-height: 75vh;
+    object-fit: cover;
+}
+
+.sequence-block {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.sequence-header {
+    border-bottom: 1px solid var(--grey-3);
+    padding-bottom: 8px;
+}
+
+.margin-top-32 { margin-top: 32px; }
+.margin-top-64 { margin-top: 64px; }
 
 
+/***************************************/
+/* Landscape Variations - Part 1 Section */
 
+.concepts-landscape-layout {
+    margin-top: 64px; /* Gives breathable vertical spacing between the three rows */
+    align-items: start;
+}
 
+.categories-text-stack {
+    grid-column: span 2;
+}
 
+.landscape-image-container {
+    grid-column: span 10;
+}
+
+.wide-landscape-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 4px;
+}
