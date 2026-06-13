@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Landing Page</title>
+    <title>Isabell Nordmark | Portfolio</title>
     
     <link rel="stylesheet" href="/styling/style_structure.css">
     <link rel="stylesheet" href="/styling/style_styling.css">
@@ -13,20 +13,20 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
-  <link rel="icon" type="image/x-icon" href="./assets/otta_favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/assets/IN.png">
   </head>
   <body>
 
     <header class="grid-12-col">
         <a href="/index.html" id="logo-container">
-            <img src=""  alt="Isabell Nordmark" id="logo"/>
+            <img src="/assets/logo_isabell.svg"  alt="Isabell Nordmark" id="logo" width="100px"/>
         </a>
 
         <div id="nav-mobile">
 
-            <a href="/projects/index.html" class="nav-element-mobile">
+            <!--<a href="/projects/index.html" class="nav-element-mobile">
                 <h4>Projects</h4>
-            </a>
+            </a>-->
 
             <a href="/about/index.html" class="nav-element-mobile">
                 <h4>About</h4>
@@ -38,11 +38,13 @@
 
         </div>
         
+        <!--
         <div class="nav-element-desktop" id="nav-element-projects">
             <a href="/projects/index.html">
                 <h4>Projects</h4>
             </a>
         </div>
+        -->
             
         <div class="nav-element-desktop" id="nav-element-about">
             <a href="/about/index.html">
@@ -63,38 +65,57 @@
     <section id="intro-section" class="grid-12-col">
 
         <div class="full-span-12-col">
-            <h1>Welcome.</h1>
+            <h1>Hi!</h1>
         </div>
 
         <div class="half-span-12-col">
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.</p>
+            <p>I'm Isabell and I am a software engineer and an architect. Here is a selection of some of my work.</p>
         </div>
 
     </section>
     
-    <section id="projects" class="grid-24-col" class="animate__animated animate__fadeIn animate__slower">
+    <section id="projects" class="project-grid animate__animated animate__fadeIn animate__slower">
 
-        <a href="./projects/archMsc/index.html" id="project-box-1" class="project-boxes">
-            <img src="./assets/archMsc/Image22_kvadrat_CMYK.png" class="project-image" />
+        <a href="/projects/swBsc/index.html" class="project-boxes">
+            <img src="/assets/swBsc/sankey_no_labels.png" class="project-image" />
+            <span class="project-title">Biologically Informed Neural Network for Alzheimer's Prediction (Information Technology Bsc Thesis Project)</span>
+        </a>
+
+        <a href="/projects/archMsc/index.html" class="project-boxes">
+            <img src="/assets/archMsc/Image22_kvadrat_CMYK.png" class="project-image" />
             <span class="project-title">Revisiting the picturesque (MSc Architecture Thesis Project)</span>
         </a>
 
-        <a href="./projects/archBsc/index.html" id="project-box-2" class="project-boxes">
-            <img src="./assets/bild_kaj.png" class="project-image" />
-            <span class="project-title">Waterside urban renewal (BSc Architecture Thesis Project)</span>
+        <a href="/projects/archBsc/index.html" class="project-boxes">
+            <img src="/assets/bild_kaj.png" class="project-image" />
+            <span class="project-title">Waterside Urban Renewal (BSc Architecture Thesis Project)</span>
         </a>
 
-        <a href="./alz/index.html" id="project-box-3" class="project-boxes">
-            <img src="./assets/archMsc/mt_plan_colors.png" class="project-image" />
-            <span class="project-title">Biologically Informed Neural Network for Alzheimer's prediction (Information Technology Bsc Thesis Project)</span>
-        </a>
-
-        <a href="./projects/colorThemeGenerator/index.html" id="project-box-4" class="project-boxes">
-            <img src="./assets/20170523_STADSPLAN-TEST_1_3000.png" class="project-image" />
+        <a href="/projects/colorThemeGenerator/index.html" class="project-boxes">
+            <img src="/assets/colorThemeGenerator/icon2.png" class="project-image" />
             <span class="project-title">Color Theme Generator</span>
         </a>
 
-        <a href="./projects/index.html" class="full-span-24-col">See all projects</a>
+        <a href="/projects/archMsc/index.html" class="project-boxes">
+            <img src="/assets/archMsc/Image22_kvadrat_CMYK.png" class="project-image" />
+            <span class="project-title">Revisiting the picturesque (MSc Architecture Thesis Project)</span>
+        </a>
+
+        <a href="/projects/archBsc/index.html" class="project-boxes">
+            <img src="/assets/bild_kaj.png" class="project-image" />
+            <span class="project-title">Waterside Urban Renewal (BSc Architecture Thesis Project)</span>
+        </a>
+
+        <a href="/projects/swBsc/index.html" class="project-boxes">
+            <img src="/assets/swBsc/sankey_no_labels.png" class="project-image" />
+            <span class="project-title">Biologically Informed Neural Network for Alzheimer's Prediction (Information Technology Bsc Thesis Project)</span>
+        </a>
+
+        <a href="/projects/colorThemeGenerator/index.html" class="project-boxes">
+            <img src="/assets/colorThemeGenerator/icon2.png" class="project-image" />
+            <span class="project-title">Color Theme Generator</span>
+        </a>
+        <!--<a href="./projects/index.html" class="full-span-24-col">See all projects</a>-->
     </section>
 
     

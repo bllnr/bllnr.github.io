@@ -137,6 +137,11 @@ h3 {
 }
 
 h4 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;}
+
+h5 {
     font-size: 16px;
     font-weight: 700;
     line-height: 1.5;}
@@ -144,7 +149,7 @@ h4 {
 small, .text_small {font-size: 12px;}
 
 .fig_text {
-    font-size: 14px; 
+    font-size: 12px; 
     font-weight: 700;}
 
 
@@ -238,4 +243,38 @@ footer {
 .concepts-container h4 {
     margin-top: 16px;
     margin-bottom: 8px;
+}
+
+ol.bracket-list {
+    list-style-type: none; /* Removes default numbering */
+    counter-reset: item;   /* Initializes the counter */
+    padding-left: 20px;
+}
+
+ol.bracket-list li {
+    counter-increment: item; /* Increments the counter per item */
+    margin-bottom: 5px;
+}
+
+ol.bracket-list li::before {
+    content: "[" counter(item) "] "; /* Adds the brackets */
+    font-weight: bold;               /* Optional styling */
+    margin-right: 5px;
+}
+
+#logo {
+  animation: spin 30s linear infinite; 
+}
+
+#logo:hover {
+  animation-duration: 0.1s; 
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

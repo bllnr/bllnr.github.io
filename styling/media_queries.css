@@ -29,6 +29,7 @@
     h4 {
         font-size: 16px;
         line-height: 1.5;
+        font-weight: 600;
     }  
 
     button {
@@ -42,7 +43,7 @@
     /**********************************/
     /*Adjusting grid elements*/
 
-    .grid-12-col {
+    .grid-12-col, .grid-24-col {
         display: grid;
         grid-template-columns: repeat(2, [col-start] 1fr);
         gap: 16px;
@@ -51,34 +52,37 @@
         padding-right: 10%;
     }
 
-    .grid-24-col {
-        display: grid;
-        grid-template-columns: repeat(2, [col-start] 1fr);
-        gap: 16px;
-        grid-auto-rows: auto;
-        padding-left: 10%;
-        padding-right: 10%;
-      }
-
-    /*Reusable classes for grid placement*/
     .full-span-12-col {
-      grid-column: col-start 1 / span 2;
+        grid-column: span 2;
     }
 
     .half-span-12-col {
-        grid-column: col-start 1 / span 1;
+        grid-column: span 2; /* Takes full mobile width, pushing the next element down */
     }
 
+    .half-span-12-col-right {
+        grid-column: span 2; /* Moves onto its own new row */
+    }
+
+    /* 24-Column Classes -> Stacked Layout */
     .full-span-24-col {
-        grid-column: col-start 1 / span 1;
+        grid-column: span 2;
     }
 
     .half-span-24-col {
-        grid-column: col-start 1 / span 1;
+        grid-column: span 2;
     }
 
     .half-span-24-col-right {
-        grid-column: col-start 1 / span 1;
+        grid-column: span 2;
+    }
+
+    /* 3-Column Layout Remapping */
+    .third-span-12-left,
+    .third-span-12-center,
+    .third-span-12-right,
+    .two-third-span-12-center {
+        grid-column: span 2; /* Force them to stretch to full width and stack */
     }
 
     /**********************************/

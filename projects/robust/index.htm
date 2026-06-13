@@ -1,0 +1,1667 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/x-icon" href="/assets/IN.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Isabell Nordmark | ROBUST | AI-Powered H&amp;S Report Categorization
+        </title>
+        <meta
+            name="description"
+            content="An AI-powered solution that automatically validates and categorizes Health &amp; Safety incident reports, enabling data-driven decision making at IKEA."
+        />
+        <meta name="author" content="Chalmers Innovation Team" />
+
+        <meta
+            property="og:title"
+            content="ROBUST | AI-Powered H&amp;S Report Categorization"
+        />
+        <meta
+            property="og:description"
+            content="Transform safety data validation with AI-powered automated categorization for Health &amp; Safety reports."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/src/assets/chalmers-logo.png" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@robust_ai" />
+        <meta name="twitter:image" content="/src/assets/chalmers-logo.png" />
+
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    </head>
+
+    <body>
+        <div id="root">
+            <div
+                role="region"
+                aria-label="Notifications (F8)"
+                tabindex="-1"
+                style="pointer-events: none"
+            >
+                <ol
+                    tabindex="-1"
+                    class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]"
+                ></ol>
+            </div>
+            <section
+                aria-label="Notifications alt+T"
+                tabindex="-1"
+                aria-live="polite"
+                aria-relevant="additions text"
+                aria-atomic="false"
+            ></section>
+            <div class="min-h-screen bg-background">
+                <header
+                    class="fixed top-0 left-0 right-0 z-50 px-6 py-4 flex items-center justify-between"
+                >
+                    <div
+                        class="absolute inset-0 -z-10 backdrop-blur-md pointer-events-none"
+                        style="
+                            -webkit-mask-image: linear-gradient(
+                                to bottom,
+                                black 0%,
+                                black 50%,
+                                rgba(0, 0, 0, 0.75) 75%,
+                                transparent 100%
+                            );
+                            mask-image: linear-gradient(
+                                to bottom,
+                                black 0%,
+                                black 50%,
+                                rgba(0, 0, 0, 0.75) 75%,
+                                transparent 100%
+                            );
+                        "
+                    ></div>
+
+                    <a
+                        href="/index.html"
+                        class="flex items-center transition-transform hover:scale-105 text-blue-400 font-bold"
+                    >
+                        <img
+                            src="/assets/logo_isabell.svg"
+                            alt="Isabell Nordmark"
+                            width="100"
+                            class="h-auto"
+                        />
+                    </a>
+
+                    <div class="flex items-center gap-4">
+                        <span
+                            class="hidden sm:inline-block text-xs font-semibold tracking-widest text-blue-500 bg-white px-2.5 py-1 rounded"
+                        >
+                            PROJECT: ROBUST<br />
+                            Sustainable Digitalization in Practice (TEK830)
+                        </span>
+
+                        <a
+                            href="/about/index.html"
+                            class="text-sm font-medium hover:text-blue-500 transition-colors px-3 py-2"
+                        >
+                            About
+                        </a>
+                        <a
+                            href="/contact/index.html"
+                            class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors bg-blue-900 text-white hover:bg-blue-800 h-10 px-4 py-2 shadow-sm"
+                        >
+                            Contact
+                        </a>
+                    </div>
+                </header>
+                <section
+                    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 to-cyan-50"
+                    style="
+                        background-size: cover;
+                        background-position: center center;
+                        background-attachment: fixed;
+                        background-repeat: no-repeat;
+                    "
+                >
+                    <div
+                        class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-background pointer-events-none z-20"
+                    ></div>
+                    <div
+                        class="relative z-30 container mx-auto px-4 py-20 text-center"
+                    >
+                        <div
+                            class="max-w-4xl mx-auto space-y-8 animate-fade-in"
+                        >
+                            <h1
+                                class="text-7xl md:text-9xl font-bold bg-gradient-to-br from-blue-800 to-cyan-600 bg-clip-text text-transparent leading-tight tracking-widest"
+                            >
+                                ROBUST
+                            </h1>
+                            <p class="text-xl md:text-2xl max-w-3xl mx-auto">
+                                An AI-powered solution that automatically
+                                categorizes Health &amp; Safety incident
+                                reports, saving analysts time and enabling
+                                data-driven decision making for safer
+                                workplaces.
+                            </p>
+                            <div
+                                class="flex flex-col sm:flex-row gap-4 justify-center pt-4 relative z-40"
+                            >
+                                <button
+                                    class="absolute left-[50%] -translate-x-1/2 top-full mt-6 hover:text-blue-300 animate-bounce cursor-pointer z-30"
+                                    aria-label="Scroll to overview"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="32"
+                                        height="32"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="lucide lucide-arrow-down"
+                                    >
+                                        <path d="M12 5v14"></path>
+                                        <path d="m19 12-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="overview" class="py-6 bg-white">
+                    <div class="container mx-auto px-4">
+                        <div class="max-w-6xl mx-auto space-y-8">
+                            <div class="text-center space-y-2">
+                                <h1
+                                    class="text-5xl py-4 md:text-6xl font-bold mb-4 tracking-tight"
+                                >
+                                    The Innovation
+                                </h1>
+                                <p class="text-xl max-w-3xl mx-auto">
+                                    Our Machine Learning powered tool
+                                    automatically suggests Safety Area
+                                    Categories in Incident and Accident
+                                    reporting
+                                </p>
+                            </div>
+
+                            <div class="text-center max-w-2xl mx-auto pt-8">
+                                <span
+                                    class="text-xs font-semibold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full"
+                                    >The Advantages</span
+                                >
+                                <h2
+                                    class="text-3xl font-bold mt-3 text-foreground"
+                                >
+                                    What ROBUST provides
+                                </h2>
+                            </div>
+
+                            <div
+                                id="features-container"
+                                class="grid md:grid-cols-3 gap-8"
+                            ></div>
+
+                            <template id="feature-card-template">
+                                <div
+                                    class="bg-gradient-to-br from-blue-50 to-white rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-1 cursor-pointer group border-2 border-blue-50 hover:border-blue-400 text-left"
+                                >
+                                    <div
+                                        class="p-6 pt-8 pb-6 text-center space-y-4"
+                                    >
+                                        <div
+                                            class="icon-wrapper w-16 h-16 mx-auto rounded-full flex items-center justify-center"
+                                        ></div>
+                                        <h3
+                                            class="feature-title text-xl font-semibold text-black"
+                                        ></h3>
+                                        <p
+                                            class="feature-description text-black"
+                                        ></p>
+                                    </div>
+                                </div>
+                            </template>
+
+                            <div class="flex justify-center items-center h-16">
+                                <div
+                                    class="w-0.5 h-full bg-gradient-to-b from-blue-200 to-transparent"
+                                ></div>
+                            </div>
+
+                            <div class="text-center max-w-2xl mx-auto pt-8">
+                                <span
+                                    class="text-xs font-semibold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full"
+                                    >The Context</span
+                                >
+                                <h2
+                                    class="text-3xl font-bold mt-3 text-foreground"
+                                >
+                                    Why We Built This
+                                </h2>
+                            </div>
+
+                            <div
+                                class="flex flex-col md:flex-row items-stretch justify-center gap-6 lg:gap-8"
+                            >
+                                <div
+                                    class="flex-1 flex flex-col justify-between bg-card rounded-2xl p-8 border-2 border-red-100 text-left bg-gradient-to-br from-red-50 to-amber-50 shadow-soft hover:shadow-2xl hover:shadow-red-500/20 hover:border-red-200 hover:-translate-y-1 transition-all duration-300 cursor-pointer group"
+                                >
+                                    <div>
+                                        <h3
+                                            class="text-2xl font-semibold mb-4 text-foreground text-center"
+                                        >
+                                            The Problem
+                                        </h3>
+                                        <p
+                                            class="leading-relaxed text-card-foreground"
+                                        >
+                                            Safety analysts currently spend
+                                            significant time manually reviewing
+                                            and correcting miscategorized
+                                            incident reports. This repetitive
+                                            work prevents them from focusing on
+                                            meaningful analysis that could
+                                            identify patterns, prevent future
+                                            incidents, and improve workplace
+                                            safety.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="flex items-center justify-center shrink-0 p-2 transform rotate-90 md:rotate-0 transition-transform duration-300"
+                                >
+                                    <div
+                                        class="rounded-full p-3 border-2 border-gray-200 bg-gradient-to-br from-gray-100 to-white text-gray-200"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            class="w-6 h-6"
+                                        >
+                                            <path d="M5 12h14"></path>
+                                            <path d="m12 5 7 7-7 7"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="flex-1 flex flex-col justify-between bg-card rounded-2xl p-8 border-2 border-emerald-100 text-left bg-gradient-to-br from-emerald-50 to-green-50 shadow-soft hover:shadow-2xl hover:shadow-green-500/20 hover:border-emerald-200 hover:-translate-y-1 transition-all duration-300 cursor-pointer group"
+                                >
+                                    <div>
+                                        <h3
+                                            class="text-2xl font-semibold mb-4 text-foreground text-center"
+                                        >
+                                            Our Solution
+                                        </h3>
+                                        <p
+                                            class="leading-relaxed text-card-foreground"
+                                        >
+                                            By leveraging Machine Learning
+                                            technology, our tool automatically
+                                            suggests Safety Areas in IKEAs
+                                            Incident and Accidents reporting
+                                            systems. This allows analysts to
+                                            immediately begin their analysis
+                                            with clean, accurate data,
+                                            accelerating decision-making and
+                                            improving overall safety outcomes.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex justify-center items-center h-16">
+                                <div
+                                    class="w-0.5 h-full bg-gradient-to-b from-blue-200 to-transparent"
+                                ></div>
+                            </div>
+
+                            <div
+                                class="text-center max-w-2xl mx-auto pt-12 pb-4"
+                            >
+                                <span
+                                    class="text-xs font-semibold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full"
+                                >
+                                    The Workflow
+                                </span>
+                                <h2
+                                    class="text-3xl font-bold mt-3 text-foreground"
+                                >
+                                    From Report to Prediction
+                                </h2>
+                                <p class="text-muted-foreground mt-2 text-base">
+                                    Here is how the system processes data in
+                                    real-time to assist safety analysts.
+                                </p>
+                            </div>
+
+                            <div
+                                class="rounded-2xl p-8 md:p-12 border-2 border-blue-50 text-left bg-gradient-to-br from-blue-50 to-white shadow-soft hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-1 transition-all duration-300 cursor-pointer group max-w-3xl mx-auto"
+                            >
+                                <h3
+                                    class="text-2xl font-semibold mb-8 text-foreground text-center md:text-left"
+                                >
+                                    How It Works
+                                </h3>
+
+                                <ol class="ml-4 space-y-0">
+                                    <li
+                                        class="relative pl-8 pb-6 border-l-2 border-blue-200 last:border-0"
+                                    >
+                                        <span
+                                            class="absolute -left-[13px] top-0 flex items-center justify-center w-6 h-6 rounded-full bg-blue-500 text-white font-bold text-xs shadow-sm"
+                                            >1</span
+                                        >
+                                        <span
+                                            class="text-card-foreground block"
+                                        >
+                                            Coworker submits an Initial incident
+                                            report
+                                        </span>
+                                    </li>
+
+                                    <li
+                                        class="relative pl-8 pb-6 border-l-2 border-blue-200 last:border-0"
+                                    >
+                                        <span
+                                            class="absolute -left-[13px] top-0 flex items-center justify-center w-6 h-6 rounded-full bg-blue-500 text-white font-bold text-xs shadow-sm"
+                                            >2</span
+                                        >
+                                        <span
+                                            class="text-card-foreground block"
+                                        >
+                                            Incident description is sent to the
+                                            ROBUST system
+                                        </span>
+                                    </li>
+
+                                    <li
+                                        class="relative pl-8 pb-6 border-l-2 border-blue-200 last:border-0"
+                                    >
+                                        <span
+                                            class="absolute -left-[13px] top-0 flex items-center justify-center w-6 h-6 rounded-full bg-blue-500 text-white font-bold text-xs shadow-sm"
+                                            >3</span
+                                        >
+                                        <span
+                                            class="text-card-foreground block"
+                                        >
+                                            ROBUST produces a Safety Area
+                                            prediction, along with a confidence
+                                            score
+                                        </span>
+                                    </li>
+
+                                    <li
+                                        class="relative pl-8 pb-6 border-l-2 border-blue-200 last:border-0"
+                                    >
+                                        <span
+                                            class="absolute -left-[13px] top-0 flex items-center justify-center w-6 h-6 rounded-full bg-blue-500 text-white font-bold text-xs shadow-sm"
+                                            >4</span
+                                        >
+                                        <span
+                                            class="text-card-foreground block"
+                                        >
+                                            The Safety Area prediction is
+                                            displayed as the default option in
+                                            the incident reporting system.
+                                        </span>
+                                    </li>
+
+                                    <li
+                                        class="relative pl-8 pb-0 border-l-2 border-blue-200 last:border-0"
+                                    >
+                                        <span
+                                            class="absolute -left-[13px] top-0 flex items-center justify-center w-6 h-6 rounded-full bg-blue-500 text-white font-bold text-xs shadow-sm"
+                                            >5</span
+                                        >
+                                        <span
+                                            class="text-card-foreground block"
+                                        >
+                                            It is always possible for a coworker
+                                            to change the Safety Area category,
+                                            enabling human oversight.
+                                        </span>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="demo" class="bg-white">
+                    <div class="container mx-auto px-4 py-8">
+                        <div
+                            class="rounded-2xl max-w-6xl mx-auto pt-16 pb-8 space-y-6"
+                        >
+                            <div class="text-center">
+                                <h1
+                                    class="text-5xl py-4 md:text-6xl font-bold mb-4 tracking-tight"
+                                >
+                                    Try It Yourself
+                                </h1>
+                                <p class="text-xl max-w-3xl mx-auto p-0">
+                                    See how our AI-powered system identifies
+                                    categories for Health & Safety reports.
+                                </p>
+                            </div>
+                            <div class="flex justify-center pb-16">
+                                <button
+                                    id="demo-btn"
+                                    class="demo-launch-btn text-2xl font-bold p-8 inline-flex items-center justify-center whitespace-nowrap rounded-md ring-offset-background transition-all duration-300 ease-in-out h-10 bg-gradient-to-br from-blue-900 to-cyan-800 text-white shadow-md hover:from-blue-700 hover:to-cyan-600 hover:-translate-y-0.25 hover:shadow-lg active:translate-y-0 active:shadow-md"
+                                    style="position: relative; z-index: 9999"
+                                >
+                                    Launch Demo
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="pitch-video" class="bg-white px-4">
+                    <div
+                        class="mx-auto max-w-6xl bg-gradient-card rounded-lg shadow-soft overflow-hidden"
+                    >
+                        <div class="text-center mb-10">
+                            <h1
+                                class="text-5xl md:text-6xl font-bold mb-4 tracking-tight"
+                            >
+                                Presentation
+                            </h1>
+                        </div>
+                        <video
+                            controls="controls"
+                            src="/projects/robust/FinalVideo_Team1.mp4"
+                            itemtype="video/mp4"
+                        ></video>
+                    </div>
+                </section>
+                <section class="py-16 px-4 bg-white">
+                    <div class="container mx-auto max-w-6xl">
+                        <div
+                            class="rounded-lg bg-card text-card-foreground border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-blue-800 to-cyan-400"
+                        >
+                            <div class="p-8">
+                                <div
+                                    class="flex flex-col md:flex-row items-center justify-between gap-6"
+                                >
+                                    <div class="flex items-center gap-4">
+                                        <div
+                                            class="w-14 h-14 rounded-xl flex items-center justify-center bg-white/10"
+                                        >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                class="lucide lucide-presentation w-8 h-8 text-white"
+                                            >
+                                                <path d="M2 3h20"></path>
+                                                <path
+                                                    d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"
+                                                ></path>
+                                                <path d="m7 21 5-5 5 5"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h2
+                                                class="text-2xl font-bold text-white mb-2"
+                                            >
+                                                Project Presentation
+                                            </h2>
+                                            <p class="text-white/90">
+                                                Link to our pitch presentation
+                                                slides.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <a
+                                        href="https://drive.google.com/file/d/1mBULm9MT1PMWSZp3zfr7V3uxkfBjjPEe/view?usp=sharing"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-white/10 hover:bg-white/20 text-white border-2 border-white/20 hover:border-white/30 transition-colors px-6 py-6 h-auto group flex items-center gap-2"
+                                        ><span class="text-lg"
+                                            >View Presentation</span
+                                        ><svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            class="lucide lucide-external-link w-5 h-5 transition-transform group-hover:translate-x-1"
+                                        >
+                                            <path d="M15 3h6v6"></path>
+                                            <path d="M10 14 21 3"></path>
+                                            <path
+                                                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                                            ></path></svg
+                                    ></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section
+                    id="impact"
+                    class="py-32 bg-background relative overflow-hidden"
+                >
+                    <div class="absolute inset-0"></div>
+                    <div class="container mx-auto px-4 max-w-7xl relative">
+                        <div class="text-center mb-20">
+                            <h1
+                                class="text-5xl md:text-6xl font-bold mb-4 tracking-tight"
+                            >
+                                Theory of Change
+                            </h1>
+                            <p class="text-xl text-slate-600">
+                                From outputs to measurable outcomes, culminating
+                                in real-world impact
+                            </p>
+                        </div>
+                        <div class="relative">
+                            <div
+                                id="flow-container"
+                                class="flex flex-col items-center lg:flex lg:items-center lg:justify-center space-y-6 sm:space-y-0"
+                            ></div>
+
+                            <template id="card-template">
+                                <div
+                                    class="card-element group relative rounded-2xl p-8 w-full max-w-md lg:w-80 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-1 cursor-pointer group border-2 border-blue-200 hover:border-blue-400 text-left"
+                                >
+                                    <div class="mb-2">
+                                        <h3
+                                            class="card-title text-2xl font-bold"
+                                        ></h3>
+                                        <p class="card-subtitle text-sm"></p>
+                                    </div>
+
+                                    <div
+                                        class="mb-6 h-20 flex flex-col justify-center"
+                                    >
+                                        <div
+                                            class="card-metric text-3xl font-bold mb-3"
+                                        ></div>
+                                        <p
+                                            class="card-metric-label text-base font-medium"
+                                        ></p>
+                                    </div>
+
+                                    <div
+                                        class="card-points space-y-2 pt-4"
+                                    ></div>
+                                </div>
+                            </template>
+
+                            <template id="point-template">
+                                <div class="flex items-start gap-2">
+                                    <div
+                                        class="w-1.5 h-1.5 rounded-full bg-foreground/40 mt-2 flex-shrink-0"
+                                    ></div>
+                                    <span class="text-blue-500 font-bold"
+                                        >•</span
+                                    >
+                                    <p class="point-text text-sm"></p>
+                                </div>
+                            </template>
+
+                            <template id="arrow-template">
+                                <div
+                                    class="flex items-center justify-center my-4 lg:my-0 mx-0 lg:mx-8 transform rotate-90 lg:rotate-0 transition-transform duration-300"
+                                >
+                                    <div
+                                        class="rounded-full p-3 border-2 border-2 border-gray-200 bg-gradient-to-br from-gray-100 to-white text-gray-200"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            class="w-6 h-6 text-primary"
+                                        >
+                                            <path d="M5 12h14"></path>
+                                            <path d="m12 5 7 7-7 7"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </section>
+                <div
+                    id="roadmap"
+                    class="min-h-screen bg-background py-20 px-6 overflow-hidden"
+                >
+                    <style>
+                        @keyframes spin-slow {
+                            from {
+                                transform: rotate(0deg);
+                            }
+                            to {
+                                transform: rotate(360deg);
+                            }
+                        }
+                        .animate-spin-slow {
+                            animation: spin-slow 8s linear infinite;
+                        }
+                    </style>
+                    <div class="max-w-7xl mx-auto">
+                        <div class="text-center mb-20">
+                            <h1
+                                class="text-5xl md:text-6xl font-bold mb-4 tracking-tight"
+                            >
+                                Next Steps
+                            </h1>
+                            <p class="text-xl text-slate-600">
+                                Building toward excellence
+                            </p>
+                        </div>
+                        <div class="mb-32">
+                            <div class="flex items-center justify-center mb-12">
+                                <span
+                                    class="text-sm font-bold text-slate-600 tracking-widest uppercase"
+                                    >Performance Improvements</span
+                                >
+                            </div>
+                            <div class="relative">
+                                <div
+                                    class="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-blue-300 to-transparent hidden md:block"
+                                ></div>
+                                <div class="grid md:grid-cols-3 gap-8 relative">
+                                    <div
+                                        data-index="0"
+                                        class="relative transition-all duration-700 opacity-100 translate-y-0"
+                                    >
+                                        <div
+                                            class="bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-blue-300 rounded-2xl p-8 transition-all duration-300 hover:border-blue-400 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2 cursor-pointer group"
+                                        >
+                                            <div
+                                                class="flex flex-col items-center text-center"
+                                            >
+                                                <div
+                                                    class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6 shadow-lg"
+                                                >
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="24"
+                                                        height="24"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        stroke-width="2"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        class="lucide lucide-trending-up w-8 h-8 text-white"
+                                                    >
+                                                        <polyline
+                                                            points="22 7 13.5 15.5 8.5 10.5 2 17"
+                                                        ></polyline>
+                                                        <polyline
+                                                            points="16 7 22 7 22 13"
+                                                        ></polyline>
+                                                    </svg>
+                                                </div>
+                                                <h3
+                                                    class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors duration-300"
+                                                >
+                                                    Ground Truth Labeling
+                                                </h3>
+                                                <p
+                                                    class="text-slate-600 text-sm"
+                                                >
+                                                    by local domain experts
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-white border-2 border-blue-500 flex items-center justify-center text-blue-600 font-bold text-sm shadow-md"
+                                        >
+                                            1
+                                        </div>
+                                    </div>
+                                    <div
+                                        data-index="1"
+                                        class="relative transition-all duration-700 opacity-100 translate-y-0"
+                                    >
+                                        <div
+                                            class="bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-blue-300 rounded-2xl p-8 transition-all duration-300 hover:border-blue-400 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2 cursor-pointer group"
+                                        >
+                                            <div
+                                                class="flex flex-col items-center text-center"
+                                            >
+                                                <div
+                                                    class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6 shadow-lg"
+                                                >
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="24"
+                                                        height="24"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        stroke-width="2"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        class="lucide lucide-map-pin w-8 h-8 text-white"
+                                                    >
+                                                        <path
+                                                            d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
+                                                        ></path>
+                                                        <circle
+                                                            cx="12"
+                                                            cy="10"
+                                                            r="3"
+                                                        ></circle>
+                                                    </svg>
+                                                </div>
+                                                <h3
+                                                    class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors duration-300"
+                                                >
+                                                    Location Parameters
+                                                </h3>
+                                                <p
+                                                    class="text-slate-600 text-sm"
+                                                >
+                                                    Include precise context
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-white border-2 border-blue-500 flex items-center justify-center text-blue-600 font-bold text-sm shadow-md"
+                                        >
+                                            2
+                                        </div>
+                                    </div>
+                                    <div
+                                        data-index="2"
+                                        class="relative transition-all duration-700 opacity-100 translate-y-0"
+                                    >
+                                        <div
+                                            class="bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-blue-300 rounded-2xl p-8 transition-all duration-300 hover:border-blue-400 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2 cursor-pointer group"
+                                        >
+                                            <div
+                                                class="flex flex-col items-center text-center"
+                                            >
+                                                <div
+                                                    class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6 shadow-lg"
+                                                >
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="24"
+                                                        height="24"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        stroke-width="2"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        class="lucide lucide-target w-8 h-8 text-white"
+                                                    >
+                                                        <circle
+                                                            cx="12"
+                                                            cy="12"
+                                                            r="10"
+                                                        ></circle>
+                                                        <circle
+                                                            cx="12"
+                                                            cy="12"
+                                                            r="6"
+                                                        ></circle>
+                                                        <circle
+                                                            cx="12"
+                                                            cy="12"
+                                                            r="2"
+                                                        ></circle>
+                                                    </svg>
+                                                </div>
+                                                <h3
+                                                    class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors duration-300"
+                                                >
+                                                    Low Confidence Targeting
+                                                </h3>
+                                                <p
+                                                    class="text-slate-600 text-sm"
+                                                >
+                                                    Focus on edge cases
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-white border-2 border-blue-500 flex items-center justify-center text-blue-600 font-bold text-sm shadow-md"
+                                        >
+                                            3
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            data-index="3"
+                            class="relative mb-32 transition-all duration-1000 opacity-100 scale-100"
+                        >
+                            <div class="flex flex-col items-center">
+                                <div class="relative">
+                                    <div class="absolute inset-0 animate-ping">
+                                        <div
+                                            class="w-24 h-24 rounded-full bg-amber-300/30"
+                                        ></div>
+                                    </div>
+                                    <div
+                                        class="relative w-24 h-24 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center shadow-2xl shadow-amber-500/30"
+                                    >
+                                        <div
+                                            class="w-20 h-20 rounded-full bg-white flex items-center justify-center"
+                                        >
+                                            <div
+                                                class="w-4 h-4 rounded-full bg-amber-500"
+                                            ></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-8 text-center">
+                                    <div
+                                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-100 border-2 border-amber-300 mb-4"
+                                    >
+                                        <span
+                                            class="text-amber-700 font-bold tracking-wide uppercase text-sm"
+                                            >Milestone</span
+                                        >
+                                    </div>
+                                    <h2
+                                        class="text-3xl md:text-4xl font-bold text-slate-900 mb-2"
+                                    >
+                                        Ready to Launch
+                                    </h2>
+                                    <p class="text-xl text-slate-700">
+                                        90% Recall for all Safety Areas
+                                    </p>
+                                </div>
+                                <div
+                                    class="absolute top-0 left-1/2 -translate-x-1/2 w-0.5 h-20 bg-gradient-to-b from-blue-400 to-transparent -translate-y-full"
+                                ></div>
+                                <div
+                                    class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0.5 h-20 bg-gradient-to-b from-blue-400 to-transparent translate-y-full"
+                                ></div>
+                            </div>
+                        </div>
+                        <div class="mb-16">
+                            <div class="flex items-center justify-center mb-12">
+                                <span
+                                    class="px-6 py-2 rounded-full bg-blue-100 border-2 border-blue-300 text-sm font-bold text-blue-700 tracking-widest uppercase"
+                                    >Continuous Learning</span
+                                >
+                            </div>
+                            <div
+                                data-index="4"
+                                class="max-w-2xl mx-auto transition-all duration-700 opacity-100 scale-100"
+                            >
+                                <div
+                                    class="relative bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-blue-300 rounded-2xl p-10 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 cursor-pointer group"
+                                >
+                                    <div
+                                        class="absolute -top-6 -right-6 w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-indigo-500 flex items-center justify-center shadow-lg"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            class="lucide lucide-message-square w-8 h-8 text-white"
+                                        >
+                                            <path
+                                                d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                                            ></path>
+                                        </svg>
+                                    </div>
+                                    <div class="text-center">
+                                        <h3
+                                            class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors duration-300"
+                                        >
+                                            User Feedback Loop
+                                        </h3>
+                                        <p class="text-slate-600 mb-6">
+                                            Improve model performance
+                                            iteratively
+                                        </p>
+                                        <div
+                                            class="flex items-center justify-center gap-4 text-sm text-blue-700 font-medium"
+                                        >
+                                            <span>Collect</span>
+                                            <div
+                                                class="w-2 h-2 rounded-full bg-blue-500"
+                                            ></div>
+                                            <span>Learn</span>
+                                            <div
+                                                class="w-2 h-2 rounded-full bg-blue-500"
+                                            ></div>
+                                            <span>Improve</span>
+                                            <div
+                                                class="w-2 h-2 rounded-full bg-blue-500"
+                                            ></div>
+                                            <span>Repeat</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-32">
+                            <div class="flex items-center justify-center mb-12">
+                                <span
+                                    class="px-6 py-2 rounded-full bg-blue-100 border-2 border-blue-300 text-sm font-bold text-blue-700 tracking-widest uppercase"
+                                    >New Capabilities</span
+                                >
+                            </div>
+                            <div class="relative">
+                                <div
+                                    class="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-blue-300 to-transparent hidden md:block"
+                                ></div>
+                                <div
+                                    class="grid md:grid-cols-2 gap-8 relative max-w-4xl mx-auto"
+                                >
+                                    <div
+                                        data-index="5"
+                                        class="relative transition-all duration-700 opacity-100 translate-y-0"
+                                    >
+                                        <div
+                                            class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2 cursor-pointer group border-2 border-blue-200 hover:border-blue-400"
+                                        >
+                                            <div
+                                                class="flex flex-col items-center text-center"
+                                            >
+                                                <div
+                                                    class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6 shadow-lg"
+                                                >
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="24"
+                                                        height="24"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        stroke-width="2"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        class="lucide lucide-tag w-8 h-8 text-white"
+                                                    >
+                                                        <path
+                                                            d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"
+                                                        ></path>
+                                                        <circle
+                                                            cx="7.5"
+                                                            cy="7.5"
+                                                            r=".5"
+                                                            fill="currentColor"
+                                                        ></circle>
+                                                    </svg>
+                                                </div>
+                                                <h3
+                                                    class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors duration-300"
+                                                >
+                                                    Category Suggestions
+                                                </h3>
+                                                <p
+                                                    class="text-slate-600 text-sm"
+                                                >
+                                                    Incident vs. Accident
+                                                    classification
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-white border-2 border-blue-500 flex items-center justify-center text-blue-600 font-bold text-sm shadow-md"
+                                        >
+                                            1
+                                        </div>
+                                    </div>
+                                    <div
+                                        data-index="6"
+                                        class="relative transition-all duration-700 opacity-100 translate-y-0"
+                                    >
+                                        <div
+                                            class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2 cursor-pointer group border-2 border-blue-200 hover:border-blue-400"
+                                        >
+                                            <div
+                                                class="flex flex-col items-center text-center"
+                                            >
+                                                <div
+                                                    class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6 shadow-lg"
+                                                >
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="24"
+                                                        height="24"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        stroke-width="2"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        class="lucide lucide-layers w-8 h-8 text-white"
+                                                    >
+                                                        <path
+                                                            d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"
+                                                        ></path>
+                                                        <path
+                                                            d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"
+                                                        ></path>
+                                                        <path
+                                                            d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"
+                                                        ></path>
+                                                    </svg>
+                                                </div>
+                                                <h3
+                                                    class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors duration-300"
+                                                >
+                                                    Sub-Category Intelligence
+                                                </h3>
+                                                <p
+                                                    class="text-slate-600 text-sm"
+                                                >
+                                                    Near-miss, Unsafe Behavior,
+                                                    etc.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-white border-2 border-blue-500 flex items-center justify-center text-blue-600 font-bold text-sm shadow-md"
+                                        >
+                                            2
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section id="technical-overview" class="py-20">
+                    <div class="container mx-auto max-w-6xl px-4">
+                        <div class="text-center mb-10">
+                            <h1
+                                class="text-5xl md:text-6xl font-bold mb-4 tracking-tight"
+                            >
+                                Technical Overview
+                            </h1>
+                            <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                                How ROBUST works, how we keep it safe, and how
+                                we measure performance.
+                            </p>
+                        </div>
+
+                        <div
+                            id="technical-card-holder"
+                            class="grid md:grid-cols-3 gap-6"
+                        >
+                            <template id="technical-card-template">
+                                <div
+                                    class="rounded-lg text-card-foreground shadow-sm border bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-blue-200/20 cursor-pointer group border-2 border-blue-200 hover:border-blue-400 shadow-soft p-6 space-y-4"
+                                >
+                                    <div class="space-y-2">
+                                        <h3
+                                            class="card-title text-xl font-bold text-slate-800"
+                                        ></h3>
+                                        <p
+                                            class="card-description text-sm text-slate-600"
+                                        ></p>
+                                    </div>
+
+                                    <div
+                                        class="accordions-container space-y-3 mt-4"
+                                    ></div>
+                                </div>
+                            </template>
+
+                            <template id="technical-accordion-template">
+                                <div class="mb-3">
+                                    <button
+                                        class="accordion-trigger w-full flex items-center justify-between rounded-md bg-white border border-blue-100 shadow-sm px-3 py-2 text-left hover:bg-amber-50/30 transition-colors duration-200"
+                                        data-accordion-target=""
+                                    >
+                                        <span
+                                            class="accordion-title text-sm font-semibold text-slate-700"
+                                        ></span>
+                                        <svg
+                                            class="chevron text-slate-500"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="16"
+                                            height="16"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            style="transition: transform 0.3s"
+                                        >
+                                            <polyline
+                                                points="6 9 12 15 18 9"
+                                            ></polyline>
+                                        </svg>
+                                    </button>
+
+                                    <div
+                                        class="accordion-content overflow-hidden transition-[max-height,opacity] duration-300 max-h-0 opacity-0"
+                                    >
+                                        <div
+                                            class="accordion-paragraphs text-sm space-y-2 p-3 text-slate-600"
+                                        ></div>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </section>
+                <section id="design-thinking" class="py-20 bg-white">
+                    <div class="container mx-auto px-4">
+                        <div class="max-w-6xl mx-auto space-y-12">
+                            <div
+                                class="text-center space-y-4"
+                                id="design-thinking-container"
+                            ></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div id="personas-container"></div>
+                </section>
+
+                <section
+                    id="data-integration"
+                    class="py-16 bg-background px-4 overflow-hidden"
+                >
+                    <div class="max-w-4xl mx-auto">
+                        <div
+                            class="border-2 rounded-2xl p-6 md:p-12 border-green-100 bg-gradient-to-br from-green-50 to-white shadow-sm"
+                        >
+                            <div class="text-center mb-12">
+                                <div
+                                    class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-100 border-2 border-green-300 mb-6"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="lucide lucide-database w-4 h-4 text-green-600"
+                                    >
+                                        <ellipse
+                                            cx="12"
+                                            cy="5"
+                                            rx="9"
+                                            ry="3"
+                                        ></ellipse>
+                                        <path
+                                            d="M3 5V19A9 3 0 0 0 21 19V5"
+                                        ></path>
+                                        <path d="M3 12A9 3 0 0 0 21 12"></path>
+                                    </svg>
+                                    <span
+                                        class="text-xs font-bold text-green-700 tracking-widest uppercase"
+                                    >
+                                        Systems Perspective
+                                    </span>
+                                </div>
+
+                                <h2
+                                    class="text-3xl md:text-4xl font-bold text-green-600"
+                                >
+                                    Data Integration Ecosystem
+                                </h2>
+                                <p
+                                    class="text-base md:text-lg text-slate-600 max-w-2xl mx-auto"
+                                >
+                                    ROBUST can be integrated with IKEA datasets
+                                    to reveal patterns, drive insights, and
+                                    reinforce systems thinking across
+                                    operations.
+                                </p>
+                            </div>
+
+                            <div class="max-w-2xl mx-auto space-y-10">
+                                <div
+                                    data-index="7"
+                                    class="transition-all duration-700 opacity-100 translate-y-0 max-w-md mx-auto"
+                                >
+                                    <div
+                                        class="bg-green-50 border-2 border-green-200 rounded-2xl p-6 transition-all duration-300 hover:border-green-400 hover:shadow-xl hover:-translate-y-1 cursor-pointer group"
+                                    >
+                                        <div
+                                            class="flex items-center gap-4 mb-5"
+                                        >
+                                            <div
+                                                class="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-teal-500 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6 shadow-md shrink-0"
+                                            >
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="24"
+                                                    height="24"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    class="lucide lucide-users w-5 h-5 text-white"
+                                                >
+                                                    <path
+                                                        d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"
+                                                    ></path>
+                                                    <circle
+                                                        cx="9"
+                                                        cy="7"
+                                                        r="4"
+                                                    ></circle>
+                                                    <path
+                                                        d="M22 21v-2a4 4 0 0 0-3-3.87"
+                                                    ></path>
+                                                    <path
+                                                        d="M16 3.13a4 4 0 0 1 0 7.75"
+                                                    ></path>
+                                                </svg>
+                                            </div>
+                                            <h3
+                                                class="text-lg font-bold text-slate-900 group-hover:text-green-600 transition-colors duration-300"
+                                            >
+                                                Personnel Systems Link
+                                            </h3>
+                                        </div>
+
+                                        <div class="space-y-3">
+                                            <div
+                                                class="flex items-start gap-3 group/item"
+                                            >
+                                                <div
+                                                    class="mt-2 w-1.5 h-1.5 rounded-full bg-green-500 shrink-0 group-hover/item:scale-150 transition-transform duration-200"
+                                                ></div>
+                                                <p
+                                                    class="text-sm text-slate-700 leading-relaxed group-hover/item:text-slate-900 transition-colors duration-200"
+                                                >
+                                                    Measure safety impact on
+                                                    sick leave statistics
+                                                </p>
+                                            </div>
+                                            <div
+                                                class="flex items-start gap-3 group/item"
+                                            >
+                                                <div
+                                                    class="mt-2 w-1.5 h-1.5 rounded-full bg-green-500 shrink-0 group-hover/item:scale-150 transition-transform duration-200"
+                                                ></div>
+                                                <p
+                                                    class="text-sm text-slate-700 leading-relaxed group-hover/item:text-slate-900 transition-colors duration-200"
+                                                >
+                                                    Track worker satisfaction
+                                                    and retention rates
+                                                </p>
+                                            </div>
+                                            <div
+                                                class="flex items-start gap-3 group/item"
+                                            >
+                                                <div
+                                                    class="mt-2 w-1.5 h-1.5 rounded-full bg-green-500 shrink-0 group-hover/item:scale-150 transition-transform duration-200"
+                                                ></div>
+                                                <p
+                                                    class="text-sm text-slate-700 leading-relaxed group-hover/item:text-slate-900 transition-colors duration-200"
+                                                >
+                                                    Optimize training based on
+                                                    incident patterns
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    data-index="10"
+                                    class="transition-all duration-1000 opacity-100 scale-100 text-center"
+                                >
+                                    <span
+                                        class="text-xs font-bold text-green-800 tracking-wider uppercase block mb-3"
+                                    >
+                                        Cross-Functional Intelligence
+                                    </span>
+                                    <p
+                                        class="text-sm md:text-base text-slate-700 leading-relaxed"
+                                    >
+                                        By connecting H&amp;S data with
+                                        personnel systems, we create a
+                                        comprehensive view of workplace safety
+                                        that enables proactive risk management
+                                        and data-driven decision making across
+                                        all IKEA operations.
+                                    </p>
+                                    <div
+                                        class="flex justify-center items-center h-16 my-6"
+                                    >
+                                        <div
+                                            class="w-0.5 h-full bg-gradient-to-b from-green-200 to-transparent"
+                                        ></div>
+                                    </div>
+                                    <p
+                                        class="text-sm md:text-base text-slate-700 leading relaxed"
+                                    >
+                                        Data Integration could later be extended
+                                        to include data systems such as
+                                        Production Data and Energy Data, to
+                                        provide even deeper insight.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="references" class="py-20 bg-white">
+                    <div class="container mx-auto px-4">
+                        <div class="max-w-6xl mx-auto space-y-12">
+                            <div class="text-center space-y-4">
+                                <h1
+                                    class="text-5xl md:text-6xl font-bold mb-4 tracking-tight"
+                                >
+                                    References
+                                </h1>
+                                <p class="text-xl text-black max-w-3xl mx-auto">
+                                    Resources and research supporting our
+                                    innovation
+                                </p>
+                            </div>
+                            <div class="bg-card rounded-lg p-8 shadow-soft">
+                                <h3
+                                    class="text-2xl font-semibold mb-4 text-foreground"
+                                >
+                                    Validation &amp; Research
+                                </h3>
+                                <p class="leading-relaxed">
+                                    Our approach is informed by user interviews
+                                    and early prototype testing. We've
+                                    identified key pain points in the current
+                                    manual process and validated that automated
+                                    categorization can likely save analysts
+                                    several hours each week, time that can be
+                                    redirected toward proactive safety
+                                    initiatives and in depth data analysis.
+                                </p>
+                            </div>
+                            <div class="grid md:grid-cols-3 gap-8">
+                                <div
+                                    class="rounded-lg text-card-foreground shadow-sm border-0 shadow-soft bg-gradient-card"
+                                >
+                                    <div class="p-6 space-y-4">
+                                        <div
+                                            class="flex items-center gap-3 mb-4"
+                                        >
+                                            <div
+                                                class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center"
+                                            >
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="24"
+                                                    height="24"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    class="lucide lucide-book-open w-5 h-5 text-black"
+                                                >
+                                                    <path d="M12 7v14"></path>
+                                                    <path
+                                                        d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"
+                                                    ></path>
+                                                </svg>
+                                            </div>
+                                            <h3
+                                                class="text-xl font-semibold text-black"
+                                            >
+                                                Client research
+                                            </h3>
+                                        </div>
+                                        <ul class="space-y-3">
+                                            <li
+                                                class="text-sm text-black leading-relaxed pl-4 border-l-2 border-primary/20"
+                                            >
+                                                <a
+                                                    href="https://www.ikea.com.tw/en/about/climate-environment/strategy"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    class="text-black hover:underline font-medium"
+                                                    >IKEA Sustainability
+                                                    Strategy 2025-2030</a
+                                                >
+                                            </li>
+                                            <li
+                                                class="text-sm text-black leading-relaxed pl-4 border-l-2 border-primary/20"
+                                            >
+                                                <a
+                                                    href="https://www.ikea.com/global/en/our-business/how-we-work/iway-our-supplier-code-of-conduct/"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    class="text-black hover:underline font-medium"
+                                                    >IKEA IWAY Supplier Code of
+                                                    Conduct</a
+                                                >
+                                            </li>
+                                            <li
+                                                class="text-sm text-black leading-relaxed pl-4 border-l-2 border-primary/20"
+                                            >
+                                                IKEA Q&amp;A Session (with
+                                                Annelie Himmler-Olausson, 19
+                                                September 2025)
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div
+                                    class="rounded-lg text-card-foreground shadow-sm border-0 shadow-soft bg-gradient-card"
+                                >
+                                    <div class="p-6 space-y-4">
+                                        <div
+                                            class="flex items-center gap-3 mb-4"
+                                        >
+                                            <div
+                                                class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center"
+                                            >
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="24"
+                                                    height="24"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    class="lucide lucide-book-open w-5 h-5 text-black"
+                                                >
+                                                    <path d="M12 7v14"></path>
+                                                    <path
+                                                        d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"
+                                                    ></path>
+                                                </svg>
+                                            </div>
+                                            <h3
+                                                class="text-xl font-semibold text-black"
+                                            >
+                                                Interviews
+                                            </h3>
+                                        </div>
+                                        <ul class="space-y-3">
+                                            <li
+                                                class="text-sm text-black leading-relaxed pl-4 border-l-2 border-primary/20"
+                                            >
+                                                Professor in the Work
+                                                Environment field
+                                            </li>
+                                            <li
+                                                class="text-sm text-black leading-relaxed pl-4 border-l-2 border-primary/20"
+                                            >
+                                                Solutions Architect in
+                                                Automotive Engineering
+                                            </li>
+                                            <li
+                                                class="text-sm text-black leading-relaxed pl-4 border-l-2 border-primary/20"
+                                            >
+                                                Logistics Manager with incident
+                                                reporting responsibilities
+                                            </li>
+                                            <li
+                                                class="text-sm text-black leading-relaxed pl-4 border-l-2 border-primary/20"
+                                            >
+                                                HR representative with specialty
+                                                in incident and accidents
+                                            </li>
+                                            <li
+                                                class="text-sm text-black leading-relaxed pl-4 border-l-2 border-primary/20"
+                                            >
+                                                Warehouse worker for building
+                                                scaffolds
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div
+                                    class="rounded-lg text-card-foreground shadow-sm border-0 shadow-soft bg-gradient-card"
+                                >
+                                    <div class="p-6 space-y-4">
+                                        <div
+                                            class="flex items-center gap-3 mb-4"
+                                        >
+                                            <div
+                                                class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center"
+                                            >
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="24"
+                                                    height="24"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    class="lucide lucide-book-open w-5 h-5 text-black"
+                                                >
+                                                    <path d="M12 7v14"></path>
+                                                    <path
+                                                        d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"
+                                                    ></path>
+                                                </svg>
+                                            </div>
+                                            <h3
+                                                class="text-xl font-semibold text-black"
+                                            >
+                                                Supporting Materials
+                                            </h3>
+                                        </div>
+                                        <ul class="space-y-3">
+                                            <li
+                                                class="text-sm text-black leading-relaxed pl-4 border-l-2 border-primary/20"
+                                            >
+                                                <a
+                                                    href="https://www.ilo.org/resource/news/nearly-3-million-people-die-work-related-accidents-and-diseases"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    class="text-black hover:underline font-medium"
+                                                    >Nearly 3 million people die
+                                                    of work-related accidents
+                                                    and diseases each year
+                                                    (ILO)</a
+                                                >
+                                            </li>
+                                            <li
+                                                class="text-sm text-black leading-relaxed pl-4 border-l-2 border-primary/20"
+                                            >
+                                                <a
+                                                    href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Accidents_at_work_statistics"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    class="text-black hover:underline font-medium"
+                                                    >There were 3 286 fatal
+                                                    accidents at work in the EU
+                                                    in 2022 (Eurostat)</a
+                                                >
+                                            </li>
+                                            <li
+                                                class="text-sm text-black leading-relaxed pl-4 border-l-2 border-primary/20"
+                                            >
+                                                <a
+                                                    href="https://eandt.theiet.org/2019/10/10/lack-reliable-data-workplace-risk-putting-employees-danger"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    class="text-black hover:underline font-medium"
+                                                    >Lack of reliable data on
+                                                    workplace risk putting
+                                                    employees in danger</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="team" class="py-20 bg-white">
+                    <div class="container mx-auto px-4">
+                        <div class="max-w-6xl mx-auto space-y-12">
+                            <div class="text-center space-y-4">
+                                <h1
+                                    class="text-5xl md:text-6xl font-bold mb-4 tracking-tight"
+                                >
+                                    Our Team
+                                </h1>
+                                <p class="text-lg max-w-2xl mx-auto">
+                                    Meet the innovators behind ROBUST
+                                </p>
+                            </div>
+                            <div
+                                class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+                                id="team-container"
+                            ></div>
+                        </div>
+                    </div>
+                </section>
+                <footer class="bg-white py-8">
+                    <div class="container mx-auto px-4 text-center">
+                        <p>
+                            © 2025 ROBUST Project - Chalmers University of
+                            Technology
+                        </p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <div
+            id="inline-demo-container"
+            class="hidden fixed inset-0 z-[9999]"
+        ></div>
+        <script src="script.js" defer></script>
+    </body>
+</html>

@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Isabell Nordmark | Software Engineering BSc</title>
+
+    <link rel="stylesheet" href="/styling/style_structure.css" />
+    <link rel="stylesheet" href="/styling/style_styling.css" />
+    <link rel="stylesheet" href="/styling/media_queries.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="./assets/otta_favicon.svg" />
+  </head>
+  <body>
+    <header class="grid-12-col">
+      <a href="/index.html" id="logo-container">
+        <img src="" alt="Isabell Nordmark" id="logo" />
+      </a>
+
+      <div id="nav-mobile">
+        <a href="/projects/index.html" class="nav-element-mobile">
+          <h4>Projects</h4>
+        </a>
+
+        <a href="/about/index.html" class="nav-element-mobile">
+          <h4>About</h4>
+        </a>
+
+        <a href="/contact/index.html" class="nav-element-mobile">
+          <h4>Contact</h4>
+        </a>
+      </div>
+
+      <div class="nav-element-desktop" id="nav-element-projects">
+        <a href="/projects/index.html">
+          <h4>Projects</h4>
+        </a>
+      </div>
+
+      <div class="nav-element-desktop" id="nav-element-about">
+        <a href="/about/index.html">
+          <h4>About</h4>
+        </a>
+      </div>
+
+      <div class="nav-element-desktop" id="nav-element-contact">
+        <a href="/contact/index.html">
+          <button>
+            <h4>Contact</h4>
+          </button>
+        </a>
+      </div>
+    </header>
+
+    <section id="intro-section" class="grid-12-col">
+      <div class="full-span-12-col">
+        <h1>Biologically Informed Neural Network for Alzheimer's Prediction</h1>
+        <h2>An explorative study based on single cell transcriptomics data</h2>
+      </div>
+      <div class="half-span-12-col">
+        <p class="project-meta">
+          <strong>BSc Thesis in Software Engineering</strong><br />Chalmers
+          University of Technology | Year: 26<br>
+          Supervisor: Annikka Polster<br> 
+          Examiner: Anna Karlsson-Bengtsson
+        </p>
+      </div>
+    </section>
+
+    <section class="grid-12-col">
+      <div class="full-span-12-col section-title">
+        <h3>Project Idea</h3>
+      </div>
+      <div class="half-span-12-col">
+        <p>
+          Alzheimer's disease (AD) is the most common form of dementia, with an
+          estimated 40 million people living with the disease globally. Today
+          there exists some treatments which slow progression of the disease and
+          ameliorate symptoms (for some patients). However, there is no cure,
+          nor preventive treatments. Biologically Informed Neural Networks
+          (BINNs) is one promising ML-technology which may aid in understanding
+          the mechanics of the disease, and be used for the development of new
+          treatments. 
+        </p>
+      </div>
+      <div class="half-span-12-col-right">
+        <p class="highlight-text">
+          <em>
+            Can a Biologically Informed Neural Network perform better than a
+            reference model for the prediction of Alzheimer's disease?
+          </em>
+        </p>
+      </div>
+    </section>
+
+    <section class="grid-12-col">
+      <div class="full-span-12-col section-title">
+        <h3>Background</h3>
+      </div>
+      <div class="half-span-12-col">
+        <h4>Alzheimer's Disease</h4>
+        <p>
+          AD is the most common form of dementia, and is also becoming more
+          prevalent due to aging populations in much of the world. The disease
+          is characterized by neural atrophy, causing problems with memory,
+          learning and cognition. The disease is progressive; changes to the
+          brain may occur as early as 20 years before symptoms are noticeable.
+          Symptoms worsen as the disease progresses to more parts of the brain,
+          and eventually the daily life of the individual is disrupted. Most
+          patients live 4-8 years after diagnosis, but usually die of other
+          causes. Comorbidities such as diabetes or renal disease shorten life
+          span and hinder treatment of the disease [1][2][3].
+        </p>
+        <br />
+
+        <p>
+          On a molecular level the disease is characterized by amyloid plaques
+          and tau-tangles. The disease occurs in an early onset form and a late
+          onset form. The late onset form is the most common, and has been
+          linked to genes such as APOE and variants of TREM2 [4][5][6].
+        </p>
+      </div>
+      <div class="half-span-12-col-right">
+        <h4>Black-Box Models and Biologically Informed Neural Networks</h4>
+        <p>
+          While machine learning techniques have increased in effectiveness and
+          computational power during the past years, they have also become more
+          opaque. Often there is a lack of insight into the reason that the
+          model predicts a certain result, which is known as a black-box model [7]. 
+          This lack of insight can be especially problematic in some fields,
+          such as medicine. Biologically Informed Neural Networks have been
+          suggested as one possible counter to this problem in medicine and
+          biotechnology. The idea is that BINNs will allow for increased
+          interpretability, while maintaing efficiency. BINNs integrate existing
+          biological knowledge of biological entities into the structure of the
+          neural network architecture, thereby increasing interpretability and
+          connection to biological reality. Additionally, BINNs are better
+          suited to the high-dimensional data produced by modern sequencing
+          methods, and decreases improves generalizability [8]. 
+        </p>
+      </div>
+      <div class="half-span-12-col">
+        <h4>Previous research in Machine Learning and Alzheimer's disease</h4>
+        <p>ML has previously been used for a number of different purposes in this area, such as biomarker discovery, AD classification and prediction of disease progression. Different omics and various types of clinical data and MRI images have been used as input. Among the specific ML techniques applied are Support Vector Machines, Convolutional Neural Networks and Language Models [9]. BINN models have previously been outside of the Alzheimer's research space for treatment development and efficacy research, as well as investigations into cellular processes. Bulk data has previously been used as input, but single cell data is now also used [8]. We have not been able to find research using single cell data along with BINN for Alzheimer's disease, which positions this work as novel.</p>
+      </div>
+      <div class="half-span-12-col-right">
+        <img src="/assets/swBsc/research space eng.png" />
+        <p class="fig_text">
+          Figure: Current research space (left) and focus of this project (right).
+        </p>
+      </div>
+    </section>
+
+    <section class="grid-12-col">
+      <div class="full-span-12-col section-title">
+        <h3>Method</h3>
+      </div>
+      <div class="half-span-12-col">
+        <p>
+          The project included a number of steps intended to create a reliable
+          and reproducible result.
+        </p>
+      </div>
+      <div class="full-span-12-col">
+        <img src="/assets/swBsc/full_project_pipeline_new_eng.png" />
+        <p class="fig_text">
+          Figure: Graphical Abstract: Overview of the full project pipeline.
+        </p>
+        <p>
+          Steps included in the project are: <b>1.</b> Data Collection
+          <b>2.</b> Preprocessing of data <b>3.</b> Creation of Mask Matrices
+          for BINN layers <b>4.</b> Creation of BINN layers <b>5.</b> Creation
+          of baseline model (SVM) <b>6.</b> Training and testing the BINN and
+          the baseline model <b>7.</b> Evaluation of the models through
+          evaluation metrics, confusion matrices, ROC-AUC, SHAP-analysis,
+          generalizability test
+        </p>
+      </div>
+      <div class="half-span-12-col">
+        <h3>Data Collection</h3>
+        <p>
+          Data was sourced from the MIT Computational Biology Group. The group
+          has made available data from ROSMAP (Religious Orders Study and Memory
+          and Aging Project). The data includes snRNA-seq transcriptomic data
+          from 2.3 million cells, collected from 427 study subjects (55.7% AD,
+          44.3% control). The samples are taken post-mortem from the prefrontal
+          cortex, with varying post-mortem interval. The demographics are
+          balanced according to sex, but includes a disproportionate number of
+          white subjects. The cell types included in the data are astrocytes,
+          oligodendrocytes, excitatory neurons, inhibitory neurons, immune
+          cells, OPCs and vascular cells. There is an extended version of the
+          dataset with more metadata (such as disease severity), that we did not
+          have access to.
+        </p>
+      </div>
+
+      <div class="half-span-12-col-right">
+        <h3>Preprocessing</h3>
+        The goal of the preprocessing step was to remove low quality reads, and
+        to improve the likelihood of the models finding disease signals in the
+        data. We used an article by Verlaan et al. (YEAR) as a template for
+        preprocessing. The following preprocessing steps were included:
+        <ul>
+          <li>Filtering of cells with low gene expression</li>
+          <li>Filtering of lowly expressed genes</li>
+          <li>Filtering of cells not in the Reactome-database</li>
+          <li>
+            Identification of Highly Varable Genes (only over the training set,
+            to prevent data leakage)
+          </li>
+          <li>Pseudobulking by subject and sub-cell type</li>
+          <li>Normalisation, log-transformation, scaling</li>
+          <li>Annotation with disease status</li>
+        </ul>
+        This steps were taken to ensure that the data is suitable as input to
+        the model and that relative differences in gene expressions is available
+        for training.
+      </div>
+
+      <div class="half-span-12-col">
+        <h3>Creation of BINN architecture</h3>
+        <p>
+          We created the BINN model architecture based on biological pathway
+          data from the Reactome database. The first layer takes gene
+          expressions as input. The following hiden layers represent biological
+          pathway entities with more fine-grained processes in the early layers,
+          and more abstract and general processes in the later layers. The final
+          output layer is the AD status prediction as a probability between 0
+          and 1.
+          <br>
+          <img src="/assets/swBsc/binn_arch_med_spec_eng.png" />
+            <p class="fig_text">Figure: BINN architecture</p>
+        </p>
+      </div>
+
+      <div class="half-span-12-col-right">
+        <h3>Reference Model</h3>
+        <p>
+          We used a Support Vector Machine to serve as a baseline model for comparison of performance and interpretability.
+        </p>
+        <br>
+        <p>
+          We originally intended to use a standard neural network as a baseline model. However, in early attempts the NN performed very poorly, and tended to overfit. As we felt this would lead to a not very interesting comparison, we explored other ML-techniques such as linear regression and random forest before settling on SVM.
+        </p>
+      </div>
+
+      <div class="half-span-12-col">
+        <h3>Generalizability Test</h3>
+        <p>
+            A generalizability test with novel data from a separate dataset was performed to determine if the model was able to generalize (was not overfitted). For the generalizability test we sourced data from the South West Dementia Brain Bank (SWDBB). Like the ROSMAP study the data comprised snRNA-seq data from the prefrontal cortex. 21 subjects were included in the study. The data was preprocessed in the same fashion as the ROSMAP data before evaluation (exempting the selection of HVGs, instead using the same genes previously selected to suit the model input layer).
+        </p>
+      </div>
+
+      <div class="half-span-12-col-right">
+        <h3>Evaluation</h3>
+        <p>To investigate the performance of the models metrics such as sensitivity, precision and f1-score were compared for the BINN (data from both ROSMAP and SWDBB) and the SVM (ROSMAP). Confusion matrices were created for BINN (ROSMAP) and SVM (ROSMAP), as well as ROC-AUC diagrams for BINN (ROSMAP) and SVM (ROSMAP).</p>
+      </div>
+
+      <div class="half-span-12-col">
+        <h3>SHAP-analysis</h3>
+        SHAP-analysis was performed to investigate the interpretability of the models, as well as to gain an understanding about whether the features considered important for model prediction corresponded to known disease mechanics by performing a small literature study. Artifacts created at this step were beeswarm plots and sankey diagrams.
+      </div>
+    </section>
+
+    <section class="grid-12-col">
+      <div class="full-span-12-col section-title">
+        <h3>Results</h3>
+      </div>
+      <div class="half-span-12-col">
+        <h4>Performance</h4>
+        <p>
+          The BINN model has a higher AUC score than the SVM model, indicating a better performance overall, and better than a random classifier for all threshold values. Looking at the confusion matrices we can see that the BINN model is better at finding true positive cases, but on the other hand that it tends to also predict that a sizeable portion of non-AD participants have AD. The SVM model is better at identifying non-AD participants, but performs less well in identifying AD participants. </p><br>
+
+          <table>
+            <caption>Table: Comparison of evaluation metrics for BINN and SVM.</caption>
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Alzheimer's</th>
+                <th>Precision</th>
+                <th>Sensitivity</th>
+                <th>F1-Score</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="2">BINN</td>
+                <td>Healthy</td>
+                <td>0.59</td>
+                <td>0.45</td>
+                <td>0.51</td>
+              </tr>
+              <tr>
+                <td>Diagnosed</td>
+                <td>0.63</td>
+                <td>0.75</td>
+                <td>0.69</td>
+              </tr>
+              <tr>
+                <td rowspan="2">SVM</td>
+                <td>Healthy</td>
+                <td>0.49</td>
+                <td>0.67</td>
+                <td>0.56</td>
+              </tr>
+              <tr>
+                <td>Diagnosed</td>
+                <td>0.73</td>
+                <td>0.57</td>
+                <td>0.64</td>
+              </tr>
+            </tbody>
+          </table>
+
+      </div>
+      <div class="half-span-12-col-right">
+        <img src="/assets/swBsc/global_binn_evaluation_en.png"></img>
+        <p class="fig_text">Figure: ROC-AUC diagram comparing performance of BINN (ROSMAP) and SVM (ROSMAP).</p>
+      </div>
+
+      <div class="half-span-12-col">
+        <img src="/assets/swBsc/binn_evaluation_en.png"></img>
+        <p class="fig_text">Figure: Confusion matrix for BINN (ROSMAP).</p>
+      </div>
+
+      <div class="half-span-12-col-right">
+        <img src="/assets/swBsc/svm_evaluation_en_260512_0806.png"></img>
+        <p class="fig_text">Figure: Confusion matrix for baseline model SVM (ROSMAP).</p>
+      </div>
+
+      <div class="half-span-12-col">
+        <h4>Generalizability</h4>
+        <p>
+          The BINN model performed well in the generalizability test. Worth noting is that the SWDBB generalizability dataset is very small (only 21 patients), which means that a small fluctuation in predictions will cause large changes in the metrics. A larger generalizability dataset, or several small ones, would help us say with more certainty whether the model is able to generalize.
+        </p> <br>
+        <table>
+          <caption>Table: Metrics for evaluation of BINN on external data (SWDBB)</caption>
+          <thead>
+            <tr>
+              <th>Alzheimer's</th>
+              <th>Precision</th>
+              <th>Sensitivity</th>
+              <th>F1-Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Healthy</td>
+              <td>0.75</td>
+              <td>0.67</td>
+              <td>0.71</td>
+            </tr>
+            <tr>
+              <td>Diagnosed</td>
+              <td>0.77</td>
+              <td>0.83</td>
+              <td>0.80</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="half-span-12-col-right">
+        <img src="/assets/swBsc/swdbb_evaluation_en.png">
+        <p class="fig_text">Figure: Generalizability test. Confusion matrix for BINN (SWDBB).</p>
+      </div>
+
+      <div class="half-span-12-col">
+        <h4>SHAP</h4>
+        <p>
+            Every point in the beeswarm diagram represents the gene expression for one gene and one individual. Red incdicates a high gene expression (feature value), while blue indicates a low gene expression. A dot on the far right side of the graph indicates that the feature value strongly contributed to a positive prediction, while a dot on the far left side strongly contributed to a negative prediction. For example, if there is a red dot on the far right for SERPINE1 this indicates that a high gene expression for SERPINE1 in a patient contributed to a positive prediction.
+        </p><br>
+        
+        <p>
+            Among the 10 genes indicated as the most impactful on prediction we have done a litereature review to see if they have been studied in relation to Alzheimer's disease. The following genes were found to have been studied in relation to AD; UBC, UBB (mutation UBB+1), SERPINE1, VCAN, FN1, EGR1 and GRIN2A, while no connection to AD were found for COL4A1, RPL41, ABCA9 and ABCA6 <br>
+        </p><br>
+
+        <p>
+            The gene deemed to be most important in affecting the prediction is UBC, a gene that is important for breaking down harmful proteins. A high gene expression contributes to a negative prediction based on SHAP-analysis. In the literature we find contradictory information on whether the gene is lowly or highly expressed in Alzheimer's disease, or whether the gene contributes to or prevents the disease. However, we can state that UBC is one of several finds that has a connection to AD, indicating that it is possible that the model has identified some markers for disease.
+        </p>
+    </div>  
+
+    <div class="half-span-12-col">
+        <h5>Beeswarm plots</h5>
+        <img src="/assets/swBsc/kandimg/beeswarm_ROSMAP_260508_0940.png">
+        <p class="fig_text">Figure: Beeswarm plot for BINN (ROSMAP)</p>
+    </div>
+    <div class="half-span-12-col-right">
+        <img src="/assets/swBsc/kandimg/beeswarm_gen_260508_0940.png">
+        <p class="fig_text">Figure: Beeswarm plot for BINN (SWDBB)</p>
+    </div>
+    <div class="half-span-12-col">
+        <p>
+            SHAP analysis for SVM finds some genes that have a connection to AD, i.e. SERPINE1, KLF4, IKZF1 and EDNRA. It also finds a number of genes with no known connection to AD, i.e. ABCC3, PIP5K1B and PDGFC.
+        </p>
+    </div>
+    <div class="half-span-12-col">
+        <img src="/assets/swBsc/kandimg/shap_beeswarm_SVM_20260513_100941.png">
+        <p class="fig_text">Figure: Beeswarm plot for SVM (ROSMAP)</p>
+    </div>
+      
+    <div class="half-span-12-col">
+        <h5>Sankey diagrams</h5>
+            <p>
+            Sankey diagrams show the 10 features most impacting the prediction for every layer.
+            Red indicates that a high gene expression contributes to positive prediction. Blue indicates that a high gene expression contributes to negative prediction. A brighter color indicated that the effect is stronger. The thickness of the node and ribbon indicate the importance compared to other features in the same layer.
+
+            Sankey diagrams provide us with the possibility of investigating which genes or biological pathways are downstream or upstream of any node in the network.
+            </p>
+    </div>
+
+    <div class="full-span-12-col">
+        <iframe src="/alz/sankey/sankey_top_10.html" 
+                title="Top 10 Sankey Diagram"
+                class="interactive-sankey"
+                height="650"
+                width="100%"></iframe>
+        <p class="fig_text">
+        Figure: The 10 most important features in every layer. We can see that several processes related to the cell cycle (G2/M Transition, Mitotic G2-G2/M phases, and Cell Cycle, Mitotic) are marked as important. This is a possible interesting finding as activation of the cell cycle in neural cells has possible connection to AD.
+        </p>
+    </div>
+
+    <div class="full-span-12-col">
+        <iframe src="/alz/sankey/Cell_Cycle_upstream_subnetwork.html" 
+                title="Cell Cycle Upstream Subnetwork"
+                class="interactive-sankey"
+                height="650"
+                width="100%"></iframe>
+        <p class="fig_text">Figure: We can select the feature Cell Cycle to see the most important processes upstream of it in every layer.</p>
+    </div>
+    
+    <div class="full-span-12-col">
+        <iframe src="/alz/sankey/UBC_downstream.html" 
+                title="UBC Downstream Sankey Diagram"
+                class="interactive-sankey"
+                height="650"
+                width="100%"></iframe>
+        <p class="fig_text">Figure: This sankey diagram shows the 10 most important process for every layer downstream of the gene UBC.</p>
+    </div>
+    </section>
+
+    <section class="grid-12-col">
+        <div class="full-span-12-col section-title">
+            <h3>Discussion</h3>
+        </div>
+        <div class="half-span-12-col">
+            <h4>Performance</h4>
+                <p>
+                The BINN-model performed better overall than the SVM-model. However we had expected that it would perform somewhat better than it did. One possible reason is that ROSMAP in fact is quite a small dataset compared to others used in machine learning. While we attempted to get as much out of the data as possible using techniques such as k-fold cross validation, we also had to use early stopping to prevent overfitting. Another possibility is that the preprocessing steps (altough they had been used for ML with ROSMAP before), were not suited for the BINN model. A different preprocessing pipeline, or different parameters for the same, may have been more apt to highligt disease signal in the data. A third possibility is that the data could have been used in other ways for training, such as using individual cell types, or stratifying training and test data by disease severity.
+                </p>
+        </div>
+        <div class="half-span-12-col-right">
+            <h4>Interpretability</h4>
+                <p>
+                A number of the genes most affecting the prediction according to the SHAP-analysis (both in beeswarm and sankey diagrams) were found to be connected to Alzheimer's disease, while some of the important genes where not found to have a connection to AD. In the literature review we also found some genes that had reversed effect on Alzheimer as shown in the beeswarm diagrams, and some where consensus on the relationship of gene expression to AD did not seem to have been reached. A subject matter expert would be needed to evaluate the results in such cases. What we can say is that it seems that the model has been able to pick out some genes that are actually connected to AD, but that it may have also been overfitting to noisy data. 
+                </p>
+                <p>
+                The BINN model holds a clear advantage to the SVM model in terms of interpretability. While both can be analysed on the level of the effect of gene expression for the final prediction, the BINN model can also be scrutinized more deeply, as it allows the investigation of the feature importances of any nodes upstream or downstream of any gene or process in the network. This allows researchers both to validate the functionality of the model, and also potentially to find ideas for further research. 
+                </p>
+                <p>
+                A comparison of the SHAP diagrams for BINN (ROSMAP) and BINN (SWDBB) may have been more interesting if we also investigated the correspondence between SHAP-values and correct/incorrect predictions for the generalizability dataset. Such an investigation may have shown which patterns the model has found that hold generally, and which were due to overfitting.
+                </p>
+        </div>
+        <div class="half-span-12-col">
+            <h4>Generalizability</h4>
+                <p>
+                In terms of generalizability the BINN model performed well. We would however recommend attempting generalizability testing with a larger amount of data to ensure that the results are reliable.
+                </p>
+        </div>
+        <div class="half-span-12-col-right">
+            <h4>Limiting factors</h4>
+                <p>
+                Data related factors limiting the model are, as mentioned earlier, the size of the training dataset. We also lacked metadata such as disease severity which could have been used to ensure more equal division of disease severity in the training and testing data sets. Another factor that may affect the quality of the data is that the samples are retrieved post-mortem, and with varying post mortem intervals. Additionally, the data likely has batch effects, something that has not been corrected for in the current preprocessing pipeline.
+                </p>
+                <p>
+                In regard to the BINN-model itself and its training there are many ways in which it could potentially be improved, for example the activation function chosen, layer normalization, learning speed and early stopping tolerance may greatly affect the model predictions. Further work could be done to select optimal hyperparameters and settings.
+                </p>
+        </div>
+        <div class="half-span-12-col">
+            <h4>Ethical aspects</h4>
+                <p>
+                Machine learning in medical applications brings about a lot of ethical considerations. Responsible handling of patient data is one important aspect. Secondly, ML models risk being biased due to their training data; e.g. this study used the ROSMAP dataset of which allmost all subjects are white. This may cause the model to be less effective for non-white patients. Additionally automation bias (overreliance on the ML model) is also a concern, as is deskilling which may eventually cause the lack of knowledge needed to interpret the results.
+                </p>
+        </div>
+        <div class="half-span-12-col-right">
+            <h4>Further research</h4>
+                <p>
+                There are a number of avenues for further research. One concerns the BINN-model training, in which hyperparameters and settings can be adjusted to find optimal prediction power. Training on specific cell types or groups of cell types may be particularily interesting, as may training on subject sub groups. The manner in which data is preprocessed could also be adjusted. 
+                </p>
+        </div>
+    </section>
+
+    <section class="grid-12-col">
+        <div class="full-span-12-col section-title">
+            <h3>Resources</h3>
+        </div>
+        <div class="half-span-12-col">
+            <ul>
+                <li><a href="/alz/index.html">More Interactive Sankey Diagrams</a>
+                <li><a href="/alz/index.html">Project Report (Swedish)</a>
+            </ul>
+        </div>
+    </section>
+
+    <section class="grid-12-col">
+        <div class="full-span-12-col section-title">
+            <h3>References</h3>
+        </div>
+        <div class="half-span-12-col">
+            <ol class="bracket-list">
+                <li>
+                    Alzheimer’s Association. (2024). 2024 Alzheimer’s disease facts and figures. <i>Alzheimer’s & Dementia</i>, <i>20</i>(5), 3708–3821. https://doi.org/10.1002/alz.13809
+                </li>
+                <li>
+                    Alzheimer’s Association. (n.d.). <i>Alzheimer’s Stages - Early, Middle, Late Dementia Symptoms</i>. Retrieved February 9, 2026, from https://www.alz.org/alzheimers-dementia/stages
+                </li>
+                <li>
+                    Hao, M., & Chen, J. (2025). Trend analysis and future predictions of global burden of alzheimer’s disease and other dementias: a study based on the global burden of disease database from 1990 to 2021. <i>BMC Medicine</i>, <i>23</i>(1), Article 378. https://doi.org/10.1186/s12916-025-04169-w
+                </li>
+                <li>
+                    Ivanova, A. V., Kutuzova, A. D., Kuzmichev, I. A., & Abakumov, M. A. (2025). Alzheimer’s Disease: From Molecular Mechanisms to Promising Therapeutic Strategies. <i>International Journal of Molecular Sciences</i>, <i>26</i>(19), Article 9444. https://doi.org/10.3390/ijms26199444
+                </li>
+                <li>
+                    Stevenson-Hoare, J., et al. (2023). Plasma biomarkers and genetics in the diagnosis and prediction of Alzheimer’s disease. <i>Brain</i>, <i>146</i>(2), Article 690. https://doi.org/10.1093/brain/awac128
+                </li>
+                <li>
+                    Lane, C. A., Hardy, J., & Schott, J. M. (2018). Alzheimer’s disease. <i>European Journal of Neurology</i>, <i>25</i>(1), 59–70. https://doi.org/10.1111/ene.13439
+                </li>
+                <li>
+                    Kosinski, M. (n.d.). <i>What Is Black Box AI and How Does It Work?</i> IBM. Retrieved February 9, 2026, from https://www.ibm.com/think/topics/black-box-ai
+                </li>
+                <li>
+                    Selby, D. A., Sprang, M., Ewald, J., & Vollmer, S. J. (2025). Beyond the black box with biologically informed neural networks. <i>Nature Reviews Genetics</i>, <i>26</i>(6), 371–372. https://doi.org/10.1038/s41576-025-00826-1
+                </li>
+                <li>
+                    Li, Z., Jiang, X., Wang, Y., & Kim, Y. (2021). Applied machine learning in Alzheimer’s disease research: omics, imaging, and clinical data. <i>Emerging Topics in Life Sciences</i>, <i>5</i>(6), 765–777. https://doi.org/10.1042/ETLS20210249
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <footer class="grid-12-col">
+      <div class="full-span-12-col"><p>&#169; 2026 Isabell Nordmark</p></div>
+    </footer>
+
+  </body>
+</html>
