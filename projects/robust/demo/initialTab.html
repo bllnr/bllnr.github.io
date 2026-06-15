@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Initial Reporting Form</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            // Configured to match your exact custom header color
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            brandPurple: "#64699d",
+                        },
+                    },
+                },
+            };
+        </script>
+    </head>
+    <body
+        class="bg-slate-50 p-4 md:p-8 flex justify-center items-start min-h-screen"
+    >
+        <div class="w-full bg-white rounded-t-lg shadow-sm">
+            <div class="px-8 py-4 rounded-t-lg bg-brandPurple">
+                <h2 class="text-2xl font-semibold">Initial Reporting</h2>
+            </div>
+
+            <form
+                id="reportingForm"
+                class="w-full bg-white border border-slate-200 border-t-0 rounded-b-lg p-8"
+                onsubmit="return false;"
+            >
+                <div class="mb-8">
+                    <p class="text-black text-sm">
+                        <span class="text-red-500">*</span> Indicates required
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div class="space-y-6">
+                        <div class="space-y-2">
+                            <label
+                                for="reportedBy"
+                                class="block text-sm font-medium text-slate-700"
+                                >Reported by</label
+                            >
+                            <select
+                                id="reportedBy"
+                                class="w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm shadow-sm focus:outline-none focus:ring-1 focus:ring-slate-400"
+                            >
+                                <option value="kim-lov">Kim Löv</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label
+                                for="date"
+                                class="block text-sm font-medium text-black"
+                            >
+                                <span class="text-red-500">*</span> When did it
+                                happen?
+                            </label>
+                            <div class="relative">
+                                <input
+                                    id="date"
+                                    type="text"
+                                    placeholder="DD-MM-YYYY"
+                                    value="13-10-2025"
+                                    class="w-full rounded-md border border-slate-200 bg-white pl-3 pr-10 py-2 text-sm shadow-sm focus:outline-none focus:ring-1 focus:ring-slate-400"
+                                />
+                                <svg
+                                    class="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <rect
+                                        width="18"
+                                        height="18"
+                                        x="3"
+                                        y="4"
+                                        rx="2"
+                                        ry="2"
+                                    />
+                                    <path d="M16 2v4M8 2v4M3 10h18" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="space-y-2">
+                            <label
+                                for="unit"
+                                class="block text-sm font-medium text-slate-700"
+                                >Unit</label
+                            >
+                            <select
+                                id="unit"
+                                class="w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm shadow-sm focus:outline-none focus:ring-1 focus:ring-slate-400"
+                            >
+                                <option value="ikea-industry">
+                                    IKEA Industry AB
+                                </option>
+                                <option value="other-unit">Other Unit</option>
+                            </select>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label
+                                for="reportFrom"
+                                class="block text-sm font-medium text-black"
+                            >
+                                <span class="text-red-500">*</span> Report from
+                            </label>
+                            <select
+                                id="reportFrom"
+                                class="w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm shadow-sm focus:outline-none focus:ring-1 focus:ring-slate-400"
+                            >
+                                <option value="coworker">Coworker</option>
+                                <option value="none">-- None --</option>
+                                <option value="department-a">
+                                    Department A
+                                </option>
+                                <option value="department-b">
+                                    Department B
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 space-y-2">
+                    <label
+                        for="whatHappened"
+                        class="block text-sm font-medium text-black"
+                    >
+                        <span class="text-red-500">*</span> What happened?
+                    </label>
+                    <textarea
+                        id="whatHappened"
+                        placeholder="Describe what happened..."
+                        class="min-h-[120px] resize-none w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm shadow-sm focus:outline-none focus:ring-1 focus:ring-slate-400"
+                    ></textarea>
+                </div>
+
+                <div class="mt-6">
+                    <div class="flex items-center gap-4">
+                        <label class="text-sm font-medium text-black"
+                            >Upload a photo</label
+                        >
+                        <input
+                            type="file"
+                            accept="image/*"
+                            class="hidden"
+                            id="photo-upload"
+                        />
+                        <label
+                            id="upload-label"
+                            href="#"
+                            for="photo-upload"
+                            class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium cursor-pointer transition-colors shadow-sm"
+                        >
+                            <svg
+                                class="w-4 h-4"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"
+                                />
+                            </svg>
+                            Click here...
+                        </label>
+                        <span
+                            id="file-name-display"
+                            class="text-sm text-gray-600"
+                        ></span>
+                    </div>
+                </div>
+
+                <div class="mt-8 space-y-6">
+                    <div class="space-y-2">
+                        <label
+                            for="immediateAction"
+                            class="block text-sm font-medium text-black"
+                        >
+                            <span class="text-red-500">*</span> Did you take an
+                            immediate action?
+                        </label>
+                        <select
+                            id="immediateAction"
+                            class="w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm shadow-sm focus:outline-none focus:ring-1 focus:ring-slate-400"
+                        >
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label
+                            for="actionsDescription"
+                            class="block text-sm font-medium text-black"
+                        >
+                            <span class="text-red-500">*</span> Describe what
+                            actions are taken?
+                        </label>
+                        <textarea
+                            id="actionsDescription"
+                            placeholder="Called maintenance manager and shared this information. I also put up a sign."
+                            class="min-h-[80px] resize-none w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm shadow-sm focus:outline-none focus:ring-1 focus:ring-slate-400"
+                        >
+Called maintenance manager and shared this information. I also put up a sign.</textarea
+                        >
+                    </div>
+
+                    <div class="space-y-2">
+                        <label
+                            for="factory"
+                            class="block text-sm font-medium text-black"
+                        >
+                            <span class="text-red-500">*</span> Factory
+                        </label>
+                        <select
+                            id="factory"
+                            class="w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm shadow-sm focus:outline-none focus:ring-1 focus:ring-slate-400"
+                        >
+                            <option value="Malmö">Malmö</option>
+                            <option value="Stockholm">Stockholm</option>
+                            <option value="Göteborg">Göteborg</option>
+                        </select>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label
+                            for="location"
+                            class="block text-sm font-medium text-black"
+                        >
+                            <span class="text-red-500">*</span> Location
+                        </label>
+                        <select
+                            id="location"
+                            class="w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm shadow-sm focus:outline-none focus:ring-1 focus:ring-slate-400"
+                        >
+                            <option value="Building 1">Building 1</option>
+                            <option value="Building 2" selected>
+                                Building 2
+                            </option>
+                            <option value="Building 3">Building 3</option>
+                            <option value="Warehouse">Warehouse</option>
+                        </select>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label
+                            for="whereHappened"
+                            class="block text-sm font-medium text-black"
+                        >
+                            <span class="text-red-500">*</span> Where did it
+                            happen?
+                        </label>
+                        <select
+                            id="whereHappened"
+                            class="w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm shadow-sm focus:outline-none focus:ring-1 focus:ring-slate-400"
+                        >
+                            <option value="Floor 1">Floor 1</option>
+                            <option value="Floor 2">Floor 2</option>
+                            <option value="Floor 3" selected>Floor 3</option>
+                            <option value="Basement">Basement</option>
+                            <option value="Roof">Roof</option>
+                        </select>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label
+                            for="precisePlace"
+                            class="block text-sm font-medium text-black"
+                            >Precise the place and/or equipment</label
+                        >
+                        <textarea
+                            id="precisePlace"
+                            placeholder="Enter precise location or equipment details..."
+                            class="min-h-[80px] resize-none w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm shadow-sm focus:outline-none focus:ring-1 focus:ring-slate-400"
+                        ></textarea>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label
+                            for="chooseTeam"
+                            class="block text-sm font-medium text-black"
+                        >
+                            <span class="text-red-500">*</span> Choose your team
+                        </label>
+                        <select
+                            id="chooseTeam"
+                            class="w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm shadow-sm focus:outline-none focus:ring-1 focus:ring-slate-400"
+                        >
+                            <option value="n/a">N/A</option>
+                            <option value="team-a">Team A</option>
+                            <option value="team-b">Team B</option>
+                            <option value="team-c">Team C</option>
+                        </select>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label
+                            for="teamLeader"
+                            class="block text-sm font-medium text-black"
+                        >
+                            <span class="text-red-500">*</span> Select Team
+                            Leader or other responsible
+                        </label>
+                        <select
+                            id="teamLeader"
+                            class="w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm shadow-sm focus:outline-none focus:ring-1 focus:ring-slate-400"
+                        >
+                            <option value="leader-kim">Kim Löv</option>
+                            <option value="leader-1">John Doe</option>
+                            <option value="leader-2">Jane Smith</option>
+                            <option value="leader-3">Mike Johnson</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="mt-8 flex justify-end">
+                        <button
+                            id="submitBtn"
+                            class="px-8 py-2 text-white font-medium rounded-md transition-colors disabled:bg-gray-400 disabled:hover:bg-gray-500 disabled:cursor-not-allowed bg-blue-500 hover:bg-blue-600"
+                            disabled
+                        >
+                            Submit
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

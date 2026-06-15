@@ -6,23 +6,23 @@ import {
     Milestone,
     FeedbackCard,
     VerticalConnector,
-} from "./roadmap.js";
+} from "./sections/roadmap.js";
 
-import { initAdvantageCards } from "./advantages.js";
+import { initAdvantageCards } from "./sections/advantages.js";
 
-import { initInlineDemo, bindDemoFormEvents } from "./demo.js";
+import { initInlineDemo, pingSpace } from "./demo/demo.js";
 
-import { initTheoryOfChange } from "./theory-of-change.js";
+import { initTheoryOfChange } from "./sections/theory-of-change.js";
 
-import { initTechnicalOverviewCards } from "./technical-overview.js";
+import { initTechnicalOverviewCards } from "./sections/technical-overview.js";
 
-import { initPersonasSection } from "./personas.js";
+import { initPersonasSection } from "./sections/personas.js";
 
-import { renderDesignThinking } from "./design-thinking.js";
+import { renderDesignThinking } from "./sections/design-thinking.js";
 
-import { initTeamMateProfile } from "./teammates.js";
+import { initTeamMateProfile } from "./sections/teammates.js";
 
-import { renderReferences } from "./references.js";
+import { renderReferences } from "./sections/references.js";
 
 import {
     performanceImprovements,
@@ -77,10 +77,13 @@ function renderSection(section) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("Script loaded successfully and DOM is ready!");
     initInlineDemo();
 
     initAdvantageCards();
+
+    document.querySelector("#roadmap").innerHTML = sections
+        .map(renderSection)
+        .join("");
 
     initTheoryOfChange();
 
@@ -93,8 +96,4 @@ document.addEventListener("DOMContentLoaded", () => {
     initTeamMateProfile();
 
     renderReferences();
-
-    document.querySelector("#roadmap").innerHTML = sections
-        .map(renderSection)
-        .join("");
 });

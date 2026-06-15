@@ -30,7 +30,7 @@ const Icons = {
     arrowUp: ArrowUp,
 };
 
-const imgPath = "/projects/robust/";
+const imgPath = "/projects/robust/project-assets/";
 
 export const advantageData = [
     {
