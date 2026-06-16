@@ -18,20 +18,20 @@ export function renderReferences() {
                     if (link.url) {
                         return `
                 <li class="${baseClass}">
-                        <span class="text-blue-500 font-bold">•</span> 
-                    <a href="${link.url}" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline font-medium">
+                        <span class="text-zinc-500 font-bold">•</span> 
+                    <a href="${link.url}" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:underline font-medium">
                         ${link.text}
                     </a>
                 </li>`;
                     }
                     return `
                     
-                    <li class="${baseClass}"><span class="text-blue-500 font-bold">•</span> ${link.text}</li>`;
+                    <li class="${baseClass}"><span class="text-zinc-500 font-bold">•</span> ${link.text}</li>`;
                 })
                 .join("");
 
             return `
-        <div class="rounded-2xl group border-2 border-blue-200 transition-all duration-300  hover:border-blue-400">
+        <div class="rounded-2xl group border-2 border-zinc-200 transition-all duration-300  hover:border-zinc-400">
             <div class="p-6 space-y-4">
                 <div class="flex items-center gap-3 mb-4">
                     <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">

@@ -1,35 +1,37 @@
 import { advantageData } from "../data.js";
-
 import { createIconSvg } from "../icons.js";
 
 export function initAdvantageCards() {
-    const strokeColor = "white";
-
     const container = document.getElementById("advantages-container");
-    const template = document.getElementById("advantages-card-template");
-
-    if (!container || !template) {
-        console.warn("Feature component resources missing from DOM.");
+    if (!container) {
+        console.warn("Advantages container missing from DOM.");
         return;
     }
 
-    container.innerHTML = "";
+    const strokeColor = "black";
+    const cardsHtml = advantageData
+        .map((item, index) => {
+            // Generate wrapped SVG component on the fly
+            const completedIcon = createIconSvg(
+                item.iconSvg,
+                index,
+                strokeColor,
+            );
 
-    advantageData.forEach((item, index) => {
-        const clone = template.content.cloneNode(true);
+            return `
+                <div class="rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-gray-500/20 hover:-translate-y-1 cursor-pointer group border-2 border-black hover:border-gray-400 text-left">
+                    <div class="p-6 pt-8 pb-6 text-center space-y-4">
+                        <div class="icon-wrapper w-16 h-16 mx-auto rounded-full flex items-center justify-center">
+                            ${completedIcon}
+                        </div>
+                        <h3 class="feature-title text-xl font-semibold text-black">${item.title}</h3>
+                        <p class="feature-description text-black">${item.description}</p>
+                    </div>
+                </div>
+            `;
+        })
+        .join("");
 
-        // Generate wrapped SVG component on the fly
-        const completedIcon = createIconSvg(item.iconSvg, index, "white");
-
-        clone.querySelector(".feature-title").textContent = item.title;
-        clone.querySelector(".feature-description").textContent =
-            item.description;
-
-        // Inject visual vector structure markup
-        clone.querySelector(".icon-wrapper").innerHTML = completedIcon;
-
-        container.appendChild(clone);
-    });
-
+    container.innerHTML = cardsHtml;
     console.log("Overview feature cards successfully initialized.");
 }

@@ -10,6 +10,8 @@ import {
 
 import { initAdvantageCards } from "./sections/advantages.js";
 
+import { initHowItWorks } from "./sections/how-it-works.js";
+
 import { initInlineDemo, pingSpace } from "./demo/demo.js";
 
 import { initTheoryOfChange } from "./sections/theory-of-change.js";
@@ -17,6 +19,8 @@ import { initTheoryOfChange } from "./sections/theory-of-change.js";
 import { initTechnicalOverviewCards } from "./sections/technical-overview.js";
 
 import { initPersonasSection } from "./sections/personas.js";
+
+import { initDataIntegration } from "./sections/data-integration.js";
 
 import { renderDesignThinking } from "./sections/design-thinking.js";
 
@@ -81,6 +85,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     initAdvantageCards();
 
+    initHowItWorks();
+
     document.querySelector("#roadmap").innerHTML = sections
         .map(renderSection)
         .join("");
@@ -92,6 +98,8 @@ document.addEventListener("DOMContentLoaded", () => {
     renderDesignThinking();
 
     initPersonasSection();
+
+    initDataIntegration();
 
     initTeamMateProfile();
 

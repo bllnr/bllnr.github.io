@@ -18,10 +18,10 @@ export function initTeamMateProfile() {
     container.innerHTML = teamMateData
         .map(
             (member) => `
-        <div class="rounded-2xl group border-2 border-blue-200 transition-all duration-300 hover:border-blue-400">
+        <div class="rounded-2xl group border-2 border-zinc-200 transition-all duration-300 hover:border-zinc-400">
             <div class="p-6 flex flex-col items-center text-center space-y-4">
                 <span class="relative flex shrink-0 overflow-hidden rounded-full w-32 h-32 border-0 border-primary/20">
-                    <img class="aspect-square h-full w-full object-cover" 
+                    <img class="grayscale aspect-square h-full w-full object-cover" 
                          alt="${member.name}" 
                          src="${member.imgSrc}" />
                 </span>

@@ -24,14 +24,14 @@ export function initPersonasSection() {
                     ${personasData
                         .map(
                             (persona) => `
-                        <div class="rounded-lg border-2 border-blue-200  transition-all duration-300 border-primary/20 animate-fade-in" style="animation-delay: ${persona.delay}">
+                        <div class="rounded-lg border-2 border-zinc-200  transition-all duration-300 border-primary/20 animate-fade-in" style="animation-delay: ${persona.delay}">
                             <div class="p-8">
                                 <div class="flex items-start gap-4 mb-6">
                                     <div class="w-16 h-16 rounded-full overflow-hidden flex items-center justify-center shadow-soft flex-shrink-0">
-                                        <img src="${persona.imgSrc}" alt="${persona.name}" class="w-full h-full object-cover" />
+                                        <img src="${persona.imgSrc}" alt="${persona.name}" class="grayscale w-full h-full object-cover" />
                                     </div>
                                     <div>
-                                        <h3 class="text-xl font-bold text-foreground mb-1 text-blue-900">
+                                        <h3 class="text-xl font-bold text-foreground mb-1 text-zinc-900">
                                             ${persona.name}
                                         </h3>
                                         <p class="text-sm text-muted-foreground">

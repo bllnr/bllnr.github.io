@@ -1,7 +1,7 @@
 const styles = {
     primary: {
-        border: "border-2 border-blue-200 hover:border-blue-300",
-        iconbg: "bg-gradient-to-br from-blue-100 to-cyan-50 text-white",
+        border: "border-2 border-zinc-200 hover:border-zinc-300",
+        iconbg: "border-2 border-zinc-200 zinc-100 text-black",
         background: "bg-white",
     },
 };
@@ -18,7 +18,7 @@ export function FeatureSection({
       <div class="flex items-center justify-center mb-12">
         <span
           class="
-            font-semibold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full
+            font-semibold uppercase tracking-wider text-zinc-600 bg-zinc-50 px-3 py-1 rounded-full
           "
         >
           ${label}
@@ -33,7 +33,7 @@ export function FeatureSection({
             h-0.5
             bg-gradient-to-r
             from-transparent
-            via-blue-200
+            via-zinc-200
             to-transparent
             hidden md:block
           "
@@ -98,7 +98,7 @@ export function FeatureCard({
           rounded-2xl
           ${theme.border}
           transition-all duration-300
-          hover:shadow-2xl hover:shadow-blue-500/20
+          hover:shadow-2xl hover:shadow-zinc-500/20
           hover:-translate-y-2
           cursor-pointer group
         "
@@ -123,7 +123,7 @@ export function FeatureCard({
           <h3
             class="
               text-xl font-bold text-slate-900 mb-2
-              group-hover:text-blue-600
+              group-hover:text-zinc-600
               transition-colors duration-300
             "
           >
@@ -148,9 +148,9 @@ export function FeatureCard({
                 w-8 h-8
                 rounded-full
                 bg-white
-                border-2 border-blue-200
+                border-2 border-zinc-200
                 flex items-center justify-center
-                text-blue-600
+                text-zinc-600
                 font-bold text-sm
               "
             >
@@ -173,7 +173,7 @@ export function FeedbackCard({ icon = "", title = "", description = "" } = {}) {
           rounded-2xl p-8
            ${theme.border}
           transition-all duration-300
-          hover:shadow-2xl hover:shadow-blue-500/20
+          hover:shadow-2xl hover:shadow-zinc-500/20
           hover:-translate-y-2
           cursor-pointer group"
     >
@@ -189,7 +189,7 @@ export function FeedbackCard({ icon = "", title = "", description = "" } = {}) {
       <div class="text-center">
         <h3
           class="text-2xl font-bold text-slate-900 mb-3
-                 group-hover:text-blue-600"
+                 group-hover:text-zinc-600"
         >
           ${title}
         </h3>
@@ -198,19 +198,19 @@ export function FeedbackCard({ icon = "", title = "", description = "" } = {}) {
           ${description}
         </p>
 
-        <div class="flex items-center justify-center gap-4 text-sm text-blue-700 font-medium" > 
+        <div class="flex items-center justify-center gap-4 text-sm text-zinc-700 font-medium" > 
         
         <span>Collect</span> 
         
-        <div class="w-2 h-2 rounded-full bg-blue-500" ></div> 
+        <div class="w-2 h-2 rounded-full bg-zinc-500" ></div> 
         
         <span>Learn</span> 
         
-        <div class="w-2 h-2 rounded-full bg-blue-500" ></div> 
+        <div class="w-2 h-2 rounded-full bg-zinc-500" ></div> 
         
         <span>Improve</span> 
         
-        <div class="w-2 h-2 rounded-full bg-blue-500" ></div> 
+        <div class="w-2 h-2 rounded-full bg-zinc-500" ></div> 
         
         <span>Repeat</span> 
         
@@ -226,20 +226,20 @@ export function Milestone({ title, subtitle }) {
 
       <div class="relative">
         <div class="absolute inset-0 animate-ping">
-          <div class="w-24 h-24 rounded-full bg-amber-300/30"></div>
+          <div class="w-24 h-24 rounded-full bg-zinc-300/30"></div>
         </div>
 
         <div
           class="relative w-24 h-24 rounded-full
-                 bg-gradient-to-br from-amber-400 to-orange-500
+                 bg-gradient-to-br from-zinc-400 to-zinc-500
                  flex items-center justify-center
-                 shadow-2xl shadow-amber-500/30"
+                 shadow-2xl shadow-zinc-500/30"
         >
           <div
             class="w-20 h-20 rounded-full bg-white
                    flex items-center justify-center"
           >
-            <div class="w-4 h-4 rounded-full bg-amber-500"></div>
+            <div class="w-4 h-4 rounded-full bg-zinc-500"></div>
           </div>
         </div>
       </div>
@@ -247,10 +247,10 @@ export function Milestone({ title, subtitle }) {
       <div class="mt-8 text-center">
         <div
           class="inline-flex items-center gap-2 px-4 py-2
-                 rounded-full bg-amber-100 border-2 border-amber-300 mb-4"
+                 rounded-full bg-zinc-100 border-2 border-zinc-300 mb-4"
         >
           <span
-            class="text-amber-700 font-bold tracking-wide uppercase text-sm"
+            class="text-zinc-700 font-bold tracking-wide uppercase text-sm"
           >
             Milestone
           </span>
@@ -272,7 +272,7 @@ export function Milestone({ title, subtitle }) {
 export function VerticalConnector(upper, lower) {
     return `
     <div class="relative flex justify-center">
-      <div class="my-6 w-0.5 h-20 bg-gradient-to-b from-transparent via-blue-300 to-transparent"></div>
+      <div class="my-6 w-0.5 h-20 bg-gradient-to-b from-transparent via-zinc-300 to-transparent"></div>
     </div>
   `;
 }
