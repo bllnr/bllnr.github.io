@@ -1,127 +1,117 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Isabell Nordmark | Contact</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Isabell Nordmark | Contact</title>
 
-    <link rel="stylesheet" href="/styling/style_structure.css">
-    <link rel="stylesheet" href="/styling/style_styling.css">
-    <link rel="stylesheet" href="/styling/media_queries.css">
-    <link rel="icon" type="image/x-icon" href="/assets/IN.png">
+        <link rel="stylesheet" href="/styling/style_structure.css" />
+        <link rel="stylesheet" href="/styling/style_styling.css" />
+        <link rel="stylesheet" href="/styling/media_queries.css" />
+        <link rel="icon" type="image/x-icon" href="/assets/IN.png" />
+    </head>
 
-</head>
-
-  <body>
-
-    <header class="grid-12-col">
-        <a href="/index.html" id="logo-container">
-            <img src="/assets/logo_isabell.png"  alt="Isabell Nordmark" id="logo"/>
-        </a>
-
-        <div id="nav-mobile">
-
-            <!--<a href="/projects/index.html" class="nav-element-mobile">
-                <h4>Projects</h4>
-            </a>-->
-
-            <a href="/about/index.html" class="nav-element-mobile">
-                <h4>About</h4>
+    <body>
+        <header class="grid-12-col">
+            <a href="/" id="logo-container">
+                <img
+                    src="/assets/logo_isabell.png"
+                    alt="Isabell Nordmark"
+                    id="logo"
+                />
             </a>
 
-            <a href="/contact/index.html" class="nav-element-mobile">
-                <h4>Contact</h4>
-            </a>
-
-        </div>
-        
-        <!--
-        <div class="nav-element-desktop" id="nav-element-projects">
-            <a href="/projects/index.html">
-                <h4>Projects</h4>
-            </a>
-        </div>
-        -->
-            
-        <div class="nav-element-desktop" id="nav-element-about">
-            <a href="/about/index.html">
-                <h4>About</h4>
-            </a>
-        </div>
-            
-        <div class="nav-element-desktop" id="nav-element-contact">
-            <a href="/contact/index.html">
-                <button>
+            <div id="nav-mobile">
+                <a href="/contact/" class="nav-element-mobile">
                     <h4>Contact</h4>
-                </button>
-            </a>
-        </div>
-            
-    </header>
-
-    <section id="contact-section" class="grid-24-col">
-        
-        <h2 class="full-span-24-col">Connect</h2>
-        <div class="half-span-24-col">
-            
-            <p>Fill in the contact form to get in touch for work or other opportunities.</p>
-            <!--
-                <div id="social-icons-wrapper">
-                <img id="social-icon" src="twitter.svg" />
-                <img id="social-icon" src="linkedin-in.svg" />
+                </a>
             </div>
 
-            -->
+            <div class="nav-element-desktop" id="nav-element-contact">
+                <a href="/contact/">
+                    <button>
+                        <h4>Contact</h4>
+                    </button>
+                </a>
+            </div>
+        </header>
 
-        </div>
+        <section id="contact-section" class="grid-24-col">
+            <h2 class="full-span-24-col">Connect</h2>
+            <div class="half-span-24-col">
+                <p>
+                    You can
+                    <a href="https://calendly.com/nordmarkisabell/30min"
+                        >book a meeting with me</a
+                    >
+                    or reach me through the contact form.
+                </p>
+            </div>
 
-        <div id="contact-form" class="half-span-24-col-right">
-            <h3>Send a message</h3>
+            <div id="contact-form" class="half-span-24-col-right">
+                <h3>Send a message</h3>
 
-            <form action="" method="get" class="form-example">
-                
-                <div class="form-input-field">
-                <label for="name">Name: </label><br>
-                <input type="text" name="name" id="name" required>
-                </div>
+                <form
+                    action=""
+                    method="POST"
+                    id="contact-form-element"
+                    class="form-example"
+                >
+                    <div class="form-input-field">
+                        <label for="name">Name: </label><br />
+                        <input type="text" name="name" id="name" required />
+                    </div>
 
-                <div class="form-input-field">
-                <label for="email">E-mail: </label><br>
-                <input type="email" name="email" id="email" required>
-                </div>
+                    <div class="form-input-field">
+                        <label for="email">E-mail: </label><br />
+                        <input type="email" name="email" id="email" required />
+                    </div>
 
-                <div class="form-input-field">
-                    <label for="phone">Phone: </label><br>
-                    <input type="phone" name="phone" id="phone">
-                </div>
+                    <div class="form-input-field">
+                        <label for="phone">Phone: </label><br />
+                        <input type="tel" name="phone" id="phone" />
+                    </div>
 
-                <div class="form-input-field">
-                    <label for="URL">Website URL: </label><br>
-                    <input type="URL" name="URL" id="URL">
-                </div>
+                    <div class="form-input-field">
+                        <label for="URL">Website URL: </label><br />
+                        <input type="url" name="URL" id="URL" />
+                    </div>
 
-                <div class="form-input-field">
-                    <label for="subject">Subject: </label><br>
-                    <input type="subject" name="subject" id="subject" required>
-                </div>
+                    <div class="form-input-field">
+                        <label for="subject">Subject: </label><br />
+                        <input
+                            type="text"
+                            name="subject"
+                            id="subject"
+                            required
+                        />
+                    </div>
 
-                <div class="form-input-field">
-                    <label for="message">Message: </label><br>
-                    <textarea name="message" id="message" rows="5" required ></textarea>
-                </div>
+                    <div class="form-input-field">
+                        <label for="message">Message: </label><br />
+                        <textarea
+                            name="message"
+                            id="message"
+                            rows="5"
+                            required
+                        ></textarea>
+                    </div>
 
-                <div class="form-button">
-                    <button id="form-button" type="submit">Send message</button>
-                </div>
+                    <div class="form-button">
+                        <button id="form-button" type="submit">
+                            Send message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
 
-            </form>
-        </div>
-
-    </section>
-
-    <footer class="grid-12-col">
-        <div class="full-span-12-col"><p>&#169; 2026 Isabell Nordmark</p></div>
-    </footer>
-
-  </body>
+        <footer class="grid-12-col">
+            <div class="full-span-12-col">
+                <p>&#169; 2026 Isabell Nordmark</p>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
