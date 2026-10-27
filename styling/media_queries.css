@@ -64,6 +64,11 @@
         grid-column: span 2; /* Moves onto its own new row */
     }
 
+    #project-hero-media .half-span-12-col,
+    #project-hero-media .half-span-12-col-right {
+        grid-column: span 1; /* The pair stays side by side instead of stacking */
+    }
+
     /* 24-Column Classes -> Stacked Layout */
     .full-span-24-col {
         grid-column: span 2;
@@ -81,7 +86,9 @@
     .third-span-12-left,
     .third-span-12-center,
     .third-span-12-right,
-    .two-third-span-12-center {
+    .two-third-span-12-center,
+    .text-span-12-col,
+    .figure-span-12-col-right {
         grid-column: span 2; /* Force them to stretch to full width and stack */
     }
 

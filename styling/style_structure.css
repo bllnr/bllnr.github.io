@@ -114,6 +114,15 @@ section {
     grid-column: col-start 7 / span 5;
 }
 
+/*Text beside a wider figure: 4 + 6 of the 10 content columns*/
+.text-span-12-col {
+    grid-column: col-start 2 / span 4;
+}
+
+.figure-span-12-col-right {
+    grid-column: col-start 6 / span 6;
+}
+
 .third-span-12-left {
     grid-column: col-start 2 / span 2;
 }
@@ -285,10 +294,10 @@ footer {
     object-fit: contain;
 }
 
+/*The pair of images at the top of a project, side by side at every width*/
 .project-image-hero {
     width: 100%;
-    height: auto;
-    max-height: 75vh;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
 }
 

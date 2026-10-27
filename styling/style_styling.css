@@ -234,6 +234,60 @@ footer {
     margin: 0 auto;
 }
 
+/* A heading within a section, set apart from what comes before it */
+.subsection-title {
+    padding-top: 48px;
+}
+
+/* Wide strips of drawings, kept from growing tall */
+.diagram {
+    max-height: 360px;
+    margin: 0 auto;
+}
+
+/* Panels cut from one drawing, each with its caption */
+.panel-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 20px;
+}
+
+.panel-grid-three {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Single rooms beside double rooms, drawn to the same scale */
+.panel-grid-views {
+    grid-template-columns: 2fr 3fr;
+}
+
+.panel-grid figure {
+    margin: 0;
+}
+
+/* A plan under its view, in one figure */
+.panel-grid figure img + img,
+.panel-grid figure .zoomable + .zoomable {
+    margin-top: 8px;
+}
+
+.panel-grid figcaption {
+    padding-top: 6px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.panel-grid-title {
+    padding-top: 32px;
+    padding-bottom: 8px;
+}
+
+.quote {
+    font-style: italic;
+    padding-left: 16px;
+    border-left: 2px solid var(--grey-3);
+}
+
 /* Images that open larger when clicked, in the image viewer */
 a.zoomable {
     display: block;

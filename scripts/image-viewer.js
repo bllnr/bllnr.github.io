@@ -1,5 +1,5 @@
-// Opens a screenshot's larger version in a viewer over the page. Without
-// JavaScript the links open the larger image on its own.
+// Opens the larger version an image links to (a.zoomable) in a viewer over
+// the page. Without JavaScript the links open the larger image on its own.
 const viewer = document.createElement("dialog");
 viewer.className = "image-viewer";
 viewer.innerHTML = `
@@ -19,7 +19,9 @@ for (const link of document.querySelectorAll("a.zoomable")) {
         const image = link.querySelector("img");
         viewerImage.src = link.href;
         viewerImage.alt = image.alt;
-        viewerCaption.textContent = link.parentElement.querySelector(".fig_text")?.textContent ?? "";
+        // The image's caption: its figure's, else the figure text beside it.
+        const caption = link.closest("figure")?.querySelector("figcaption") ?? link.parentElement.querySelector(".fig_text");
+        viewerCaption.textContent = caption?.innerText.trim().replace(/\s*\n\s*/g, " · ") ?? "";
         viewer.showModal();
     });
 }
