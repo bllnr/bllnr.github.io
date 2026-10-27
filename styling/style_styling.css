@@ -118,14 +118,14 @@ body {
 
 h1 {
     margin-top: 0;
-    font-size: 96px;
+    font-size: 72px;
     font-weight: 100;
     line-height: 1.2;
     font-style: italic;
 }
 
 h2 {
-    font-size: 56px;
+    font-size: 42px;
     font-weight: 100;
     line-height: 1.2;
     padding-bottom: 16px;
@@ -232,6 +232,57 @@ footer {
 .project-logo {
     width: 200px;
     margin: 0 auto;
+}
+
+/* Images that open larger when clicked, in the image viewer */
+a.zoomable {
+    display: block;
+    cursor: zoom-in;
+}
+
+a.zoomable:hover {
+    transform: none;
+}
+
+.image-viewer {
+    margin: auto;
+    max-width: 96vw;
+    max-height: 96vh;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--white);
+    cursor: zoom-out;
+}
+
+.image-viewer::backdrop {
+    background-color: rgb(30 30 22 / 0.8);
+}
+
+.image-viewer figure {
+    margin: 0;
+}
+
+.image-viewer img {
+    max-width: calc(96vw - 32px);
+    max-height: calc(96vh - 80px);
+    margin: 0 auto;
+}
+
+.image-viewer figcaption {
+    padding-top: 8px;
+}
+
+.image-viewer-close {
+    position: absolute;
+    top: 4px;
+    right: 8px;
+    border: none;
+    background: none;
+    font-size: 28px;
+    line-height: 1;
+    color: var(--black);
+    cursor: pointer;
 }
 
 .highlight-text {
