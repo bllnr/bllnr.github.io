@@ -229,10 +229,15 @@ footer {
     line-height: 1.6;
 }
 
+.project-logo {
+    width: 200px;
+    margin: 0 auto;
+}
+
 .highlight-text {
     font-size: 28px;
     line-height: 1.4;
-    color: var(--orange-3);
+    color: var(--orchid-7);
     font-weight: 600;
 }
 
@@ -269,18 +274,12 @@ ol.bracket-list li::before {
 }
 
 #logo {
-    animation: spin 30s linear infinite;
-}
-
-#logo:hover {
-    animation-duration: 10s;
-}
-
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+    display: inline-block;
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.2;
+    white-space: nowrap;
+    color: var(--black);
 }

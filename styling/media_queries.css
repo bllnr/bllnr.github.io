@@ -101,7 +101,7 @@
     }
 
     #logo {
-        max-width: 50%
+        font-size: 20px;
     }
 
    .nav-element-desktop {
@@ -148,7 +148,7 @@
 @media (max-width: 400px) {
 
     #logo {
-        max-width: 75%
+        font-size: 18px;
     }
 
     #placeholder-1, #placeholder-2, #placeholder-3, #placeholder-4 {
