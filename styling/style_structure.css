@@ -219,6 +219,13 @@ header {
     flex-grow: 0;
 }
 
+/*A logo or drawing shown whole inside the box, not cropped to fill it*/
+.project-image-contain {
+    object-fit: contain;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
 .project-title {
     padding: 16px;
     flex-grow: 1; 
